@@ -1,0 +1,114 @@
+.. currentmodule:: myhdl
+
+.. _new09:
+
+***********************
+What's new in MyHDL 0.9
+***********************
+
+Python 3 support
+================
+
+Experimental Python 3 support has been added to MyHDL 0.9.
+This was a major effort to modernize the code. As a result,
+Python 2 and 3 are supported from a single codebase.
+
+See :doc:`/python3` for more info.
+
+Interfaces (Conversion of attribute accesses)
+=============================================
+
+Rationale
+---------
+
+Complex designs often have many signals that are passed to different levels of
+hierarchy.  Typically, many signals logically belong together. This can be
+modelled by an *interface*: an object that has a number of :class:`Signal`
+objects as its attributes.  Grouping signals into an interface simplifies the
+code, improves efficiency, and reduces errors.
+
+The following is an example of an *interface* definition::
+
+    class Complex:
+        def __init__(self, min=-2, max=2):
+	    self.real = Signal(intbv(0, min=min, max=max))
+	    self.imag = Signal(intbv(0, min=min, max=max))
+
+
+Although previous versions supported interfaces for modeling, they were not 
+convertible.  MyHDL 0.9 now supports conversion of designs that use interfaces.
+
+The following is an example using the above ``Complex`` interface definition::
+
+    a,b = Complex(-8,8), Complex(-8,8)
+    c = Complex(-128,128)
+
+    def complex_multiply(clock, reset, a, b, c):
+
+        @always_seq(clock.posedge, reset=reset)
+        def cmult():
+            c.real.next = (a.real*b.real) - (a.imag*b.imag)
+	    c.imag.next = (a.real*b.imag) + (a.imag*b.real)
+
+	return cmult
+	           
+
+Solution
+--------
+
+The proposed solution is to create unique names for attributes which are used
+by `MyHDL generator`_\s.  The converter will create a unique name by using the
+name of the parent and the name of the attribute along with the name of the
+MyHDL module instance. The converter will essentially replace the "." with an
+"_" for each interface element. In essence, interfaces are supported
+using hierarchical name expansion and name mangling. 
+
+Note that the MyHDL convertor supports interfaces, even though
+the target HDLs do not. This is another great example where the
+convertor supports a high-level feature that is not available
+in the target HDLs.
+
+See also
+--------
+For additional information see the original proposal `mep-107`_.
+
+.. _mep-107: http://dev.myhdl.org/meps/mep-107.html
+.. _MyHDL generator: http://docs.myhdl.org/en/latest/manual/reference.html#myhdl-generators-and-trigger-objects
+
+Other noteworthy improvements
+=============================
+
+``ConcatSignal`` interface
+--------------------------
+
+The interface of :class:`ConcatSignal` was enhanced. In
+addition to signals, you can now also use constant values 
+in the concatenation.
+
+``std_logic`` type ports 
+------------------------
+
+:func:`toVHDL` has a new attibute ``std_logic_ports``. When
+set, only ``std_logic`` type ports are used in the interface
+of the top-level VHDL module.
+
+Development flow
+----------------
+
+The MyHDL development flow has been modernized by moving to git and `github`_
+for version control. In addition, travis has set up so that all pull requests
+are tested automatically, enabling continuous intergration.
+
+Acknowledgments
+===============
+
+The Python 3 support effort was coordinated by Keerthan Jaic, who also
+implemented most of if. Convertible interfaces were championed by Chris Felton,
+and implemented by Keerthan Jaic.
+
+MyHDL development is a collaborative effort, as can be seen on `github`_.
+Thanks to all who contributed with suggestions, issues and pull requests.
+
+.. _github: https://www.github.com/jandecaluwe/myhdl
+
+

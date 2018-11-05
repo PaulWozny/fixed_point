@@ -1,0 +1,27 @@
+# http://docs.travis-ci.com/user/workers/container-based-infrastructure/
+sudo: required
+dist: trusty
+
+language: python
+python:
+  - "2.7"
+  - "pypy"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+
+install:
+  - pip install .
+
+env:
+  - CI_TARGET=core
+  - CI_TARGET=iverilog
+  - CI_TARGET=ghdl
+
+before_script:
+  - ./scripts/ci_deps.sh
+
+script: ./scripts/ci.sh
+
+notifications:
+  email: false
