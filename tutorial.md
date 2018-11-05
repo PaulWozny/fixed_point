@@ -21,3 +21,18 @@ or go to http://www.myhdl.org/start/installation.html for other options.
 ~~~
 >> sudo snap install pycharm-community --classic
 ~~~
+4.Essential is adding myhdl package to Project Interpreter in IDE:
+ 
+ - Run Pycharm:
+ 
+~~~
+>>  sudo pycharm-community 
+~~~
+
+ - Create new project
+ 
+ - Add myhdl to Project Interpreter in Pycharm:
+ 
+~~~
+File >> Settings >> Project: [name of project] >> Project Interpreter >> + Sign (Install) >> myhdl >> Install Package 
+~~~
