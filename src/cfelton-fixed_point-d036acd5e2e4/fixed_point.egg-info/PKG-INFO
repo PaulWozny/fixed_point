@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: fixed-point
+Version: 0.1.dev0
+Summary: Fixed-point object for MyHDL and DSP simulation
+Home-page: https://bitbucket.org/cfelton/fixed_point
+Author: Christopher L. Felton
+Author-email: cfelton@ieee.org
+License: LGPL
+Description: UNKNOWN
+Keywords: HDL Fixed-Point Fixed Floating FPGA ASIC
+Platform: Any

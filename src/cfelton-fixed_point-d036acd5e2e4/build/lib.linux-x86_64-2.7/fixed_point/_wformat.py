@@ -55,13 +55,13 @@ class WFormat(object):
             elif len(format) == 3:
                 wl,iwl,fwl = format
             else:
-                raise TypeError('Invalid W format')
+                raise TypeError, "Invalid W format"
         elif isinstance(format, Wformat):
             wl = val._wl
             iwl = val._iwl
             fwl = val._fwl
         else:
-            raise TypeError("Invalid type %s"%(type(format)))
+            raise TypeError, "Invalid type %s"%(type(format))
         #print('setter %d,%d,%d'%(wl,iwl,fwl))
         assert wl == iwl+fwl+1, 'Invalid %d,%d,%d'  % (wl,iwl,fwl)
         self._wl = wl
@@ -70,7 +70,7 @@ class WFormat(object):
 
     @property
     def format(self):
-        return self.fmtpeErr
+        return self.fmt
     @format.setter
     def format(self,val):
         self.fmt = val
@@ -96,9 +96,9 @@ class WFormat(object):
             wl = iwl+fwl+1
             for ii in other:
                 ii.fmt = (wl,iwl)
-                peErr
+                
         else:
-            raise TypeError('Align requires  WFormat, list or tuple type')
+            raise TypeError, "Align requires  WFormat, list or tuple type"
 
     def __str__(self):
         s = "WFormat(%d,%d,[%d])" % (self._wl, self._iwl, self._fwl)
@@ -116,7 +116,7 @@ class WFormat(object):
         elif key == 2:
             val = self._fwl
         else:
-            raise AssertionError("Invalid index %d %s" % (key, type(key)))
+            raise AssertionError, "Invalid index %d %s" % (key, type(key))
 
         return val
     # @todo getitem setitme wl, iwl, fwl

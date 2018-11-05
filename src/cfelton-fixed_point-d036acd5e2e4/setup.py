@@ -18,7 +18,7 @@
 from setuptools import setup,find_packages
 
 setup(name = "fixed_point",
-      version = "0.1dev",
+      version = "0.1.dev0",
       description = "Fixed-point object for MyHDL and DSP simulation",      
       license = "LGPL",
       platforms = ["Any"],
