@@ -6,7 +6,10 @@ Addidionaly, we would like to extend existing tutorial base  to quickstart begin
 #### QuickStart guide
 Go to *tutorial.md* and follow the instruction to install MyHDL on your computer.
 
-#### Fixed point aruthmetic
+#### Fixed point arithmetic
+- quick description of what fixed point actually is
+- ----||--- marix multiplication
+- methods of implementing
 
 
 #### ToDo (12.11.2018)

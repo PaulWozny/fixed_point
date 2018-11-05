@@ -1,0 +1,15 @@
+[submodule "src/--name"]
+	path = src/--name
+	url = https://github.com/myhdl/myhdl.git
+[submodule "src/-name"]
+	path = src/-name
+	url = https://github.com/myhdl/myhdl.git
+[submodule "src/-mydhl_latest"]
+	path = src/-mydhl_latest
+	url = https://github.com/myhdl/myhdl.git
+[submodule "src/mydhl_latest"]
+	path = src/mydhl_latest
+	url = https://github.com/myhdl/myhdl.git
+[submodule "src/myhdl_latest"]
+	path = src/myhdl_latest
+	url = https://github.com/myhdl/myhdl.git
