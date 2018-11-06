@@ -25,9 +25,9 @@ import copy
 
 import myhdl
 
-from ._fixbv import fixbv
-from ._wformat import WFormat as W
-from ._modes import ROUND_MODES
+from _fixbv import fixbv
+from _wformat import WFormat as W
+from _modes import ROUND_MODES
 #from _misc import convert_format
 
 class fixed(fixbv):
@@ -99,7 +99,7 @@ class fixed(fixbv):
                           round_mode=self.round_mode,
                           overflow_mode=self.overflow_mode)
             
-        elif isinstance(other, (int,intbv)):
+        elif isinstance(other, (int,long,intbv)):
             fmax = other if other > 0 else 0
             fmin = other if other < 0 else 0
             other = fixed(other,min=fmin,max=fmax+1,res=0)
@@ -122,7 +122,7 @@ class fixed(fixbv):
             other = fixed(other, format=self.W,
                           round_mode=self.rm, overflow_mode=self.om)
             
-        elif isinstance(other, (int,intbv)):
+        elif isinstance(other, (int,long,intbv)):
             fmax = other if other > 0 else 0
             fmin = other if other < 0 else 0
             other = fixed(other,min=fmin,max=fmax+1,res=0)
@@ -147,7 +147,7 @@ class fixed(fixbv):
         a = fixed(float(self),format=self)
         if isinstance(other, float):
             b = fixed(other)
-        elif isinstance(other,int):
+        elif isinstance(other,(int,long)):
             bmin = 0 if other > 0 else other
             bmax = other+1 if other > 0 else 0
             b = fixed(other,min=bmin,max=bmax,res=0)
@@ -176,7 +176,7 @@ class fixed(fixbv):
         a = fixed(float(self),format=self)
         if isinstance(other, float):
             b = fixed(other)
-        elif isinstance(other,int):
+        elif isinstance(other,(int,long)):
             bmin = 0 if other > 0 else other
             bmax = other+1 if other > 0 else 0
             b = fixed(other,min=bmin,max=bmax,res=0)

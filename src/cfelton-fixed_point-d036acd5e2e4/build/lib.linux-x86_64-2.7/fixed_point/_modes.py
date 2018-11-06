@@ -11,7 +11,7 @@ ROUND_MODES = (   # towards  :
     )
 
 def is_round_mode(mode):
-    if mode.lower() in ROUND_MODES:
+    if ROUND_MODES.has_key(mode.lower()):
        found = True
     else:
         # @todo: does it match
@@ -24,7 +24,7 @@ OVERFLOW_MODES = (
     )
 
 def is_overflow_mode(mode):
-    if mode.lower() in OVERFLOW_MODES:
+    if OVERFLOW_MODES.has_key(mode.lower()):
         found = True
     else:
         # @todo: is there a close match?

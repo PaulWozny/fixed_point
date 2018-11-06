@@ -29,7 +29,7 @@ class WFormat(object):
 
     def __init__(self,*fmt,**kwfmt):#,wl=None,iwl=None,fwl=None):
         assert len(fmt) <= 3
-        for lk,lv in list(kwfmt.items()):
+        for lk,lv in kwfmt.items():
             assert lk in ('wl','iwl','fwl'), "Invalid keyword argument %s"%(lk)
         if len(fmt) == 0:
             wl,iwl,fwl = (kwfmt['wl'],kwfmt['iwl'],kwfmt['fwl'],)
@@ -55,13 +55,13 @@ class WFormat(object):
             elif len(format) == 3:
                 wl,iwl,fwl = format
             else:
-                raise TypeError("Invalid W format")
+                raise TypeError, "Invalid W format"
         elif isinstance(format, Wformat):
             wl = val._wl
             iwl = val._iwl
             fwl = val._fwl
         else:
-            raise TypeError("Invalid type %s"%(type(format)))
+            raise TypeError, "Invalid type %s"%(type(format))
         #print('setter %d,%d,%d'%(wl,iwl,fwl))
         assert wl == iwl+fwl+1, 'Invalid %d,%d,%d'  % (wl,iwl,fwl)
         self._wl = wl
@@ -98,7 +98,7 @@ class WFormat(object):
                 ii.fmt = (wl,iwl)
                 
         else:
-            raise TypeError("Align requires  WFormat, list or tuple type")
+            raise TypeError, "Align requires  WFormat, list or tuple type"
 
     def __str__(self):
         s = "WFormat(%d,%d,[%d])" % (self._wl, self._iwl, self._fwl)
@@ -116,7 +116,7 @@ class WFormat(object):
         elif key == 2:
             val = self._fwl
         else:
-            raise AssertionError("Invalid index %d %s" % (key, type(key)))
+            raise AssertionError, "Invalid index %d %s" % (key, type(key))
 
         return val
     # @todo getitem setitme wl, iwl, fwl

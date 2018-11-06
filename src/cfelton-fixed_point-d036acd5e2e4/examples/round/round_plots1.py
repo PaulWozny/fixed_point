@@ -2,6 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 from fixed_point import fixed,W
 from fixed_point import ROUND_MODES
 

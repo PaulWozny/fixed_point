@@ -9,9 +9,9 @@ import argparse
 from math import log, ceil, floor
 
 from numpy.random import uniform
-
 from myhdl import *
-from myhdl_tools import Clock,Reset
+
+# from myhdl_tools import Clock,Reset
 from fixed_point import fixed,fixbv
 
 
@@ -96,7 +96,7 @@ def testbench(args):
     xfx = Signal(fixbv(0, min=-1, max=1, res=2**-15))
     yfx = Signal(fixbv(0, min=-1, max=1, res=2**-30))
 
-    print repr(xfx), repr(yfx)
+    # print repr(xfx), repr(yfx)
     tb_dut_fp = sum_of_squares(clk, rst, xfp, yfp, N)
     if run == "trace":
         tb_dut_fx = traceSignals(m_sum_of_squares, clock, reset, xfx, yfx, N)
@@ -124,9 +124,8 @@ def testbench(args):
         for ii in range(Nloops): # 
             for jj in range(N):
                 yield clk.posedge
-                print " FP: %-03.6f [%-03.6f], FX: %-03.6f [%-03.6f] ( %08x, %08x)" % \
-                      (yfp, xfp, yfx.fValue, xfx.fValue, yfx, xfx)
-                print "Error Squared %f" % ((yfp - yfx.fValue)**2)
+                print (" FP: %-03.6f [%-03.6f], FX: %-03.6f [%-03.6f] ( %08x, %08x)" )
+
         raise StopSimulation
     
 

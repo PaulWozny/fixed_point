@@ -6,6 +6,18 @@ Addidionaly, we would like to extend existing tutorial base  to quickstart begin
 #### QuickStart guide
 Go to *tutorial.md* and follow the instruction to install MyHDL on your computer.
 
+
+---
+In order to install fixed_point module you have to navigate to its direcory and run following command:
+> sudo python2.7 setup.py install
+
+current state of work:
+- fixed_numbers module is written for py2.7
+- myhdl is written for py3.6
+- 2to3 tool doesn't provide ready-to-use code
+
+
+
 #### Fixed point arithmetic
 - quick description of what fixed point actually is
 - ----||--- marix multiplication
