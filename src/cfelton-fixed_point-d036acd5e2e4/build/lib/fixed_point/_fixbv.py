@@ -221,8 +221,8 @@ class fixbv(myhdl.intbv):
         return retval
     
     def __deepcopy__(self, visit):
-        retval = fixbv(self.fValue, self.min, self.max, self.res,
-                       W=self.W,
+        retval = fixbv(self._fval, self.min, self.max, self.res,
+                       self.W,
                        round_mode=self._rm, overflow_mode=self._om)
         return retval
 

@@ -24,8 +24,9 @@ quick workaroud:
     - import local module 
 - Problem with async in new python (myhdl/test/core functions)
 - Build from current files into new egg to fix old python version compatibility issues via:
+> Remove current build 
 > sudo python3.6 setup.py install
->>Use in *fixed_point* library
+>Use in *fixed_point* library
 Old build supplied in repository is outdated
 
 
