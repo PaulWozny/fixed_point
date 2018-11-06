@@ -24,9 +24,9 @@ import math
 import copy
 
 import myhdl
-from fixed_point import _wformat
-from ._modes import ROUND_MODES,OVERFLOW_MODES
-from ._misc import check_myhdl_version
+from _wformat import WFormat
+from _modes import ROUND_MODES,OVERFLOW_MODES
+from _misc import check_myhdl_version
 
 SignalType = check_myhdl_version()
 
@@ -85,12 +85,12 @@ class fixbv(myhdl.intbv):
         incomplete_spec = [kw is None for kw in (min,max,res)]
         if True in incomplete_spec:
             try:
-                if isinstance(format, _wformat.WFormat):
+                if isinstance(format,WFormat):
                     self._W = copy.copy(format)
                 elif isinstance(format,fixbv):
                     self._W = copy.copy(format._W)
                 elif isinstance(format, (tuple,list)):
-                    self._W = _wformat.WFormat(*format)
+                    self._W = WFormat(*format)
                 else:
                     raise ValueError("Invalid format type %s"%(type(format)))
                 wl,iwl,fwl = self._W.fmt
@@ -103,18 +103,18 @@ class fixbv(myhdl.intbv):
                 
         # validate the range and resolution
         if max < 1 or abs(min) < 1:
-            raise ValueError("Maximum and Minimum  has to be 1 or greater")
-        if max == None or not isinstance(max, (int, float)):
-            raise ValueError("Maximum has to be provided, max=%s" % (str(max)))
-        if min == None or not isinstance(min, (int, float)):
-            raise ValueError("Minimum has to be provided, min=%s" % (str(min)))
+            raise ValueError, "Maximum and Minimum  has to be 1 or greater"
+        if max == None or not isinstance(max, (int, long, float)):
+            raise ValueError, "Maximum has to be provided, max=%s" % (str(max))
+        if min == None or not isinstance(min, (int, long, float)):
+            raise ValueError, "Minimum has to be provided, min=%s" % (str(min))
         if res == None or not isinstance(res, float):
-            raise ValueError("Resolution has to be provided, res=%s" % (str(res)))
+            raise ValueError, "Resolution has to be provided, res=%s" % (str(res))
 
         if not round_mode in ROUND_MODES:
-            raise ValueError("Round mode %s not supported!" % round_mode)
+            raise ValueError, "Round mode %s not supported!" % round_mode
         if not overflow_mode in OVERFLOW_MODES:
-            raise ValueError("Overflow mode %s not supported!" % overflow_mode)
+            raise ValueError, "Overflow mode %s not supported!" % overflow_mode
 
         # save the round and overflow modes
         self._rm = round_mode
@@ -127,7 +127,7 @@ class fixbv(myhdl.intbv):
         nwl = niwl+nfwl+1
         
         if self._W is None:
-            self._W = _wformat.WFormat(nwl, niwl)
+            self._W = WFormat(nwl,niwl)
         else:
             wl,iwl,fwl = self._W.fmt
             assert wl == nwl, "calculation error, word length"
@@ -305,7 +305,7 @@ class fixbv(myhdl.intbv):
         if isinstance(other, fixbv):
             iW = self.W * other.W
         else:
-            raise TypeError("other must be fixbv: self*other")
+            raise TypeError, "other must be fixbv: self*other"
             
         retval = fixbv(0, format=iW, round_mode=self.round_mode)
         mul = myhdl.intbv(self._val) * other
@@ -328,7 +328,7 @@ class fixbv(myhdl.intbv):
         # @todo if other is not fixbv (int, long, intbv) convert to fixbv and
         # perform the addition
         else:
-            raise TypeError("other must be fixbv: self + other")
+            raise TypeError, "other must be fixbv: self + other"
 
         retval = fixbv(0, format=iW, round_mode=self.round_mode)
         add = myhdl.intbv(self._val) + other
@@ -347,7 +347,7 @@ class fixbv(myhdl.intbv):
         # @todo if other is not fixbv (int, long, intbv) convert to fixbv and
         # perform the addition
         else:
-            raise TypeError("other must be fixbv: self*other")
+            raise TypeError, "other must be fixbv: self*other"
 
         retval = fixbv(0, format=iW, round_mode=self.round_mode)
         sub = myhdl.intbv(self._val) - other
@@ -435,8 +435,8 @@ class fixbv(myhdl.intbv):
                 else:
                     fnbits = int(abs(math.floor(math.log(frac, 2)))) + 1
             except :
-                print("Fractional %s Integer %s" % (frac, integer))
-                print("Unexpected error:", sys.exc_info()[0])
+                print "Fractional %s Integer %s" % (frac, integer)
+                print "Unexpected error:", sys.exc_info()[0]
                 raise
             
         fnbits = 1 if fnbits == 0 else fnbits
@@ -533,7 +533,7 @@ class fixbv(myhdl.intbv):
                 retval = round(value)
 
         else:
-            raise TypeError("ERROR: fixbv._round(): %s not supported round mode!" % self._rm)
+            raise TypeError, "ERROR: fixbv._round(): %s not supported round mode!" % self._rm
 
         return int(retval)
 

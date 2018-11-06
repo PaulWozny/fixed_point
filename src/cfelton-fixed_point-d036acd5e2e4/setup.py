@@ -28,7 +28,7 @@ setup(name = "fixed_point",
       keywords = "HDL Fixed-Point Fixed Floating FPGA ASIC",
 
       packages = find_packages(),
-      install_requires = ['myhdl>=0.8'],
+      install_requires = ['myhdl>=0.10'],
       test_suite = 'nose.collector',
       tests_require = 'nose'
       )
