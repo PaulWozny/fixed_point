@@ -31,7 +31,7 @@ def sum_of_squares(clock, reset, x, y, N=16):
     buf = [Signal(0.) for ii in range(N)]
     ii  = Signal(0)
     
-    @always_seq(clock.posedge, reset=rest)
+    @always_seq(clock.posedge, reset=reset)
     def g_sosw():
         buf[int(ii)].next = x
         ii.next = (ii + 1) % N
@@ -45,10 +45,10 @@ def m_sum_of_squares(clock, reset, x, y, N=16):
     """
     This module is the fixbv type
     """
-    assert isinstance(x, fixbv)
-    assert isinstance(y, fixbv)
-    smin,smax,sres = (x.min**2,xmax**2,x.res**2)
-    buf = [Signal(fixbv(0, xmin, xmax, xres)) for i in range(N)]
+    # assert isinstance(x, fixbv)
+    # assert isinstance(y, fixbv)
+    smin,smax,sres = (x.min**2,x.max**2,x.res**2)
+    buf = [Signal(fixbv(0, x.min, x.max, x.res)) for i in range(N)]
     sqr = [Signal(fixbv(0, smin, smax, sres)) for i in range(N)]
 
     # Check that N is a power of 2
@@ -97,7 +97,7 @@ def testbench(args):
     yfx = Signal(fixbv(0, min=-1, max=1, res=2**-30))
 
     # print repr(xfx), repr(yfx)
-    tb_dut_fp = sum_of_squares(clk, rst, xfp, yfp, N)
+    tb_dut_fp = sum_of_squares(clock, reset, xfp, yfp, N)
     if run == "trace":
         tb_dut_fx = traceSignals(m_sum_of_squares, clock, reset, xfx, yfx, N)
     else:
