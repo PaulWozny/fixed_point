@@ -4,7 +4,7 @@ Main object of this group is to upgrade existing MyHDL module version 0.9 to a n
 Addidionaly, we would like to extend existing tutorial base  to quickstart beginners.
 
 #### QuickStart guide
-Go to *tutorial.md* and follow the instruction to install MyHDL on your computer.
+Go to *tutorial_[yourOS].md* and follow the instruction to install MyHDL on your computer.
 
 
 ---
