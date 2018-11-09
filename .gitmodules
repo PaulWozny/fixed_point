@@ -1,0 +1,23 @@
+[submodule "src/--name"]
+	path = src/--name
+	url = https://github.com/myhdl/myhdl.git
+[submodule "src/-name"]
+	path = src/-name
+	url = https://github.com/myhdl/myhdl.git
+[submodule "src/-mydhl_latest"]
+	path = src/-mydhl_latest
+	url = https://github.com/myhdl/myhdl.git
+[submodule "src/mydhl_latest"]
+	path = src/mydhl_latest
+	url = https://github.com/myhdl/myhdl.git
+[submodule "src/myhdl_latest"]
+	path = src/myhdl-latest
+	url = https://github.com/myhdl/myhdl.git
+[submodule "src/myhdl"]
+	path = src/myhdl
+	url = https://github.com/myhdl/myhdl.git
+	branch = 0.9-maintenance
+[submodule "src/myhdl-0.9-maintenance"]
+	path = src/myhdl-0.9-maintenance
+	url = https://github.com/myhdl/myhdl.git
+	branch = 0.9-maintenance
