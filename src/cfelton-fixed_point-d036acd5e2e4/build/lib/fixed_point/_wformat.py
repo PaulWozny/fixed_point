@@ -57,10 +57,10 @@ class WFormat(object):
                 wl,iwl,fwl = format
             else:
                 raise TypeError("Invalid W format")
-        elif isinstance(format, Wformat):
-            wl = val._wl
-            iwl = val._iwl
-            fwl = val._fwl
+        elif isinstance(format, WFormat):
+            wl = format._wl                                          # Changed from val._wl
+            iwl = format._iwl                                        # Changed from val._iwl
+            fwl = format._fwl                                        # Changed from val._fwl
         else:
             raise TypeError("Invalid type %s"%(type(format)))
         #print('setter %d,%d,%d'%(wl,iwl,fwl))
@@ -82,7 +82,7 @@ class WFormat(object):
         iwl = self._iwl
         fwl = self._fwl
         
-        if isinstance(other, Wformat):
+        if isinstance(other, WFormat):
             iwl = max(iwl, other._iwl)
             fwl = max(fwl, other._fwl)
 
@@ -90,13 +90,14 @@ class WFormat(object):
             other.fmt = (wl, iwl)
             
         elif isinstance(other, (list, tuple)):
-            assert isinstance(ii,Wformat)
+            #assert isinstance(ii,WFormat)
             for ii in other:
+                assert isinstance(ii, WFormat)
                 iwl = max(iwl, ii._iwl)
                 fwl = max(fwl, ii._fwl)
             wl = iwl+fwl+1
             for ii in other:
-                ii.fmt = (wl,iwl)
+                ii.fmt = (wl, iwl)
                 
         else:
             raise TypeError("Align requires  WFormat, list or tuple type")
@@ -153,9 +154,16 @@ class WFormat(object):
         assert isinstance(other,WFormat), \
                "Invalid type for other %s" %  (type(other))
         #  @todo: negative values of iwl and fwl
-        wl = self._wl+other._wl
-        fwl = self._fwl+other._fwl
-        iwl = wl-fwl-1
-        #print('M: ',wl,iwl,fwl)
+
+        # THIS WAS HERE ORIGINALLY, and caused an AssertionError between iwl and niwl in _fixbv constructor @~132
+        #                                                                                   (for self._W != None)
+        # wl = self._wl+other._wl
+        # fwl = self._fwl+other._fwl
+        # iwl = wl-fwl-1
+
+        iwl = self._iwl + other._iwl
+        fwl = self._fwl + other._fwl
+        wl = iwl + fwl + 1
+        # print('M: ',wl,iwl,fwl)
         return WFormat(wl,iwl,fwl)
 

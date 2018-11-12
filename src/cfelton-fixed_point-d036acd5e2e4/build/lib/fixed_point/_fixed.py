@@ -24,6 +24,7 @@ import math
 import copy
 
 import myhdl
+import myhdl._intbv as intbv
 
 from ._fixbv import fixbv
 from ._wformat import WFormat as W
@@ -99,7 +100,7 @@ class fixed(fixbv):
                           round_mode=self.round_mode,
                           overflow_mode=self.overflow_mode)
             
-        elif isinstance(other, (int,intbv)):
+        elif isinstance(other, (int, intbv)):
             fmax = other if other > 0 else 0
             fmin = other if other < 0 else 0
             other = fixed(other,min=fmin,max=fmax+1,res=0)
@@ -130,7 +131,7 @@ class fixed(fixbv):
         assert isinstance(other, (fixed,fixbv)), "invalid divide"
         W = self.W*other.W
 
-        retval = fixed(0,W=W,round_mode=self.round_mode,
+        retval = fixed(0,W,round_mode=self.round_mode,
                        overflow_mode=self.overflow_mode)
 
         # do the normal integer multiply
