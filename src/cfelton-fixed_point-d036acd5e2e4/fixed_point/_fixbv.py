@@ -94,7 +94,7 @@ class fixbv(myhdl.intbv):
                 else:
                     raise ValueError("Invalid format type %s"%(type(format)))
                 wl,iwl,fwl = self._W.fmt
-                res=2.0**-fwl; min=-2**iwl; max=2**iwl-res
+                res=2.0**-fwl; min=-2**iwl; max=2**iwl
             except TypeError:
                 self._W = None
                 min, max, res = self._calc_min_max_res(value)
@@ -449,7 +449,7 @@ class fixbv(myhdl.intbv):
         inbits = 1 if inbits == 0 else inbits
 
         res = 2 ** (-fnbits)
-        max = 2**(inbits-1) - res
+        max = 2**(inbits-1)
         min = -2**(inbits-1)
 
         #print "Calc limits %f --> fnbits %d inbits %d, max %f, min %f, res %f" % (fval, fnbits, inbits, max, min, res)

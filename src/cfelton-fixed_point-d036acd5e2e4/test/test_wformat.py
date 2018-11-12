@@ -53,7 +53,7 @@ def test_add():
     W2 = WFormat(4,-4)
     Wa = W1+W2
     wl,iwl,fwl = Wa.fmt
-    assert iwl == -3, '%s+%s==%s'  % (W1,W2,afmt)
+    assert iwl == -3, '%s+%s==%s'  % (W1,W2,Wa.fmt)
     assert fwl == 7, '%s+%s==%s'  % (W1,W2,Wa)
     assert wl == 5, '%s+%s==%s'  % (W1,W2,Wa)
 
@@ -96,9 +96,14 @@ def test_mul():
     W2 = WFormat(8,4)  # W8.4.3
     Wa = W1*W2
     wl,iwl,fwl = Wa.fmt
-    assert iwl == 9, '%s+%s==%s'  % (W1,W2,Wa)
+
+    # These changes result from change of mul calculations of iwl and sign bits
+    # (previously mult resulted in 2 sign bits for some reason)
+    #assert iwl == 9, '%s+%s==%s'  % (W1,W2,Wa)
+    assert iwl == 8, '%s+%s==%s' % (W1, W2, Wa)
     assert fwl == 6, '%s+%s==%s'  % (W1,W2,Wa)
-    assert wl == 16, '%s+%s==%s'  % (W1,W2,Wa)
+    #assert wl == 16, '%s+%s==%s' % (W1, W2, Wa)
+    assert wl == 15, '%s+%s==%s' % (W1, W2, Wa)
     
 
 if __name__ == '__main__':

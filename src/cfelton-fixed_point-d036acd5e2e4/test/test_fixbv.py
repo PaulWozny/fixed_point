@@ -132,7 +132,7 @@ def test_create():
     x = fixbv(0, min=-1, max=1, res=2**-15)
     print(x, hex(x), repr(x))
 
-    print "\n** Create W9.3 fxintbv == 2.5"
+    print("\n** Create W9.3 fxintbv == 2.5")
     x = fixbv(2.5, min=-8, max=8, res=1./32)
     print(x, hex(x), repr(x))
 
@@ -176,7 +176,7 @@ def test_create():
 
     print("[1] Add: c = a + b")
     c[:] = a + b
-    print "c: ", c, type(c), repr(c)
+    print("c: ", c, type(c), repr(c))
 
     print("[2] Add: c = 1.25 + 2.0")
     a = fixbv(1.25, min=-4, max=4, res=2**-12)

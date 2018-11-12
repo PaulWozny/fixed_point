@@ -12,7 +12,7 @@ from numpy.random import uniform
 from myhdl import *
 
 # from myhdl_tools import Clock,Reset
-from fixed_point import fixed,fixbv
+from fixed_point import fixed, fixbv
 
 
 def sos(x):
@@ -89,7 +89,7 @@ def testbench(args):
     Nloops = args.NLoops
     
     clock = Signal(bool(0))
-    reset = ResetSignal(0, active=0, async=True)
+    reset = ResetSignal(0, active=0, isasync=True)
     xfp = Signal(0.0)
     yfp = Signal(0.0)
 
@@ -111,25 +111,25 @@ def testbench(args):
     def tb_init():
         f = .9999 #uniform(-1,1)
         xfp.next = f
-        xfx.next = xfx.Round(f)
+        xfx.next = xfx._round(f)
 
     @instance
     def stimulus():
-        yield clk.posedge
-        rst.next = True
+        yield clock.posedge
+        reset.next = True
         yield delay(10)
-        rst.next = False
+        reset.next = False
         yield delay(1)
 
         for ii in range(Nloops): # 
             for jj in range(N):
-                yield clk.posedge
+                yield clock.posedge
                 print (" FP: %-03.6f [%-03.6f], FX: %-03.6f [%-03.6f] ( %08x, %08x)" )
 
         raise StopSimulation
     
 
-    Simulation((tb_clock, tb_init, tb_stim, tb_dut_fp, tb_dut_fx)).run()
+    Simulation((tb_clock, tb_init, stimulus, tb_dut_fp, tb_dut_fx)).run()
 
 def _create_parser():
     parser = argparse.ArgumentParser()
