@@ -24,10 +24,12 @@ quick workaroud:
     - import local module 
 - Problem with async in new python (myhdl/test/core functions)
 - Build from current files into new egg to fix old python version compatibility issues via:
-> Remove current build 
-> sudo python3.6 setup.py install
->Use in *fixed_point* library
-Old build supplied in repository is outdated
+    - Remove current build 
+    `>> sudo python3.6 setup.py install`
+    - Use in *fixed_point* library
+    - Old build supplied in repository is outdated  
+-  Workaround for building eggs after each debuf process:
+    `>> python setup.py develop`
 
 
 
@@ -47,3 +49,8 @@ Old build supplied in repository is outdated
 ---
 - write readme in concise manner
 - lubie placki
+
+#### ToDo (19.11.2018)
+- Implement hardcoded multiplication of 4x4 matrices using fixed_point
+- Scale multiplication functionality to varied input parameters
+- Add screenshots to tutorials for more professional experience
