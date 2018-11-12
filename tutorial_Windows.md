@@ -31,6 +31,9 @@ Instructions for MyHDL installation on Windows:
     - https://www.jetbrains.com/pycharm/download/#section=windows  
 
 6. Create a virtual environment with appropriate modules enabled.  
-![Step 1: Enter project settings.](PyCh_venv1.PNG)  
-![Step 2: Navigate to virtual environment creation.](PyCh_venv2.PNG)  
-![Step 3: Create new environment. As long as python executable path is correct, modules added afterwards should appear automatically.](PyCh_venv3.PNG)  
+    - Step 1: Enter project settings.  
+    ![venv1](PyCh_venv1.PNG)  
+    - Step 2: Navigate to virtual environment creation.   
+    ![venv2](PyCh_venv2.PNG)  
+    - Step 3: Create new environment. As long as python executable path is correct, modules added afterwards should appear automatically.  
+    ![venv3](PyCh_venv3.PNG)  
