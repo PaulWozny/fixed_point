@@ -87,17 +87,17 @@ class fixbv(myhdl.intbv):
             try:
                 if isinstance(format, _wformat.WFormat):
                     self._W = copy.copy(format)
-                elif isinstance(format,fixbv):
+                elif isinstance(format, fixbv):
                     self._W = copy.copy(format._W)
                 elif isinstance(format, (tuple,list)):
                     self._W = _wformat.WFormat(*format)
                 else:
                     raise ValueError("Invalid format type %s"%(type(format)))
                 wl,iwl,fwl = self._W.fmt
-                min=-2**iwl; max=2**iwl; res=2.0**-fwl 
+                res=2.0**-fwl; min=-2**iwl; max=2**iwl-res
             except TypeError:
                 self._W = None
-                min,max,res = self._calc_min_max_res(value)
+                min, max, res = self._calc_min_max_res(value)
         else:
             self._W = None
                 
@@ -125,11 +125,17 @@ class fixbv(myhdl.intbv):
         
         (niwl, nfwl) = self._calc_width(ival, res)
         nwl = niwl+nfwl+1
-        
+
+
         if self._W is None:
             self._W = _wformat.WFormat(nwl, niwl)
         else:
-            wl,iwl,fwl = self._W.fmt
+            wl, iwl, fwl = self._W.fmt
+            # tmptest = ">> Before: _W.wl={0}, _W.iwl={1}, _W.fwl={2}, nwl={3}, niwl={4}, nfwl={5}".format(self._W._wl, self._W._iwl, self._W._fwl, nwl, niwl, nfwl)
+            # print(tmptest)
+            # tmptest = ">> Before: min={0}, max={1}, ival={2}, res={3}, niwl={4}, nfwl={5}".format(min, max, ival, res,
+            #                                                                                    niwl, nfwl)
+            # print(tmptest)
             assert wl == nwl, "calculation error, word length"
             assert iwl == niwl, "calculation error, integer word length"
             assert fwl == nfwl, "calculation error, fractional word length"
@@ -216,7 +222,7 @@ class fixbv(myhdl.intbv):
     ######################################################################
     def __copy__(self):
         retval = fixbv(self._fval, self.min, self.max, self.res,
-                       W=self.W,
+                       self.W,
                        round_mode=self._rm, overflow_mode=self._om)
         return retval
     
@@ -351,7 +357,7 @@ class fixbv(myhdl.intbv):
 
         retval = fixbv(0, format=iW, round_mode=self.round_mode)
         sub = myhdl.intbv(self._val) - other
-        retval.value = add
+        retval.value = sub
         return sub #retval
 
     def __div__(self, other):
@@ -441,9 +447,11 @@ class fixbv(myhdl.intbv):
             
         fnbits = 1 if fnbits == 0 else fnbits
         inbits = 1 if inbits == 0 else inbits
-        max = 2**(inbits-1)
+
+        res = 2 ** (-fnbits)
+        max = 2**(inbits-1) - res
         min = -2**(inbits-1)
-        res = 2**(-fnbits)
+
         #print "Calc limits %f --> fnbits %d inbits %d, max %f, min %f, res %f" % (fval, fnbits, inbits, max, min, res)
 
         # make sure limits are still applicable for the rounded version of fval
