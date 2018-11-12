@@ -12,13 +12,13 @@ In order to install fixed_point module you have to navigate to its direcory and 
 > sudo python2.7 setup.py install
 
 current state of work:
-- fixed_numbers module is written for py2.7
+- fixed_numbers module is written for py2.7 ?? __Works fine for me using 3.6 - AP__
 - myhdl is written for py3.6
 - 2to3 tool doesn't provide ready-to-use code
 ---
 
-### Problems xd
-- Problem with WFormat (incompatibile syntax of py2.7
+### Problems, Progress & Notes
+- Problem with WFormat (incompatibile syntax of py2.7)
 quick workaroud:
     - change sys libraries -> recompile to egg or
     - import local module 
@@ -30,7 +30,14 @@ quick workaroud:
     - Old build supplied in repository is outdated  
 -  Workaround for building eggs after each debuf process:
     `>> python setup.py develop`
-
+- Wformat previously handled __mul__ while keep 2 sign bits, and one was then counted as a iwl due to bad arithmetic. Main problem of 12.11.18
+  previous handling left/commented out just in case/as an artifact  
+      - Test bench for wformat modified to reflect this change
+      - !@!Comments in code seem to hint that negative numbers are not handled for multiplication!@!  
+              - This is further proven by sign bit handling (keeping 2 sign bits seems lazy and likely means original creator ignored them in wformat __mul__).
+- Other fixes to obvious syntax errors (due to 3.6 port or previous user error)  
+      - New build of fixed_point (new egg) included in current package (12.11.18)
+  
 
 
 
@@ -53,4 +60,5 @@ quick workaroud:
 #### ToDo (19.11.2018)
 - Implement hardcoded multiplication of 4x4 matrices using fixed_point
 - Scale multiplication functionality to varied input parameters
-- Add screenshots to tutorials for more professional experience
+- Add screenshots to tutorials for more professional experience [Windows +]
+
