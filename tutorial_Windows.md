@@ -1,26 +1,31 @@
-#__Installation of the enviroment on Windows__
+#Installation of the enviroment on Windows  
 Instructions for MyHDL installation on Windows:
 
-1. Download and install newest version of python for Windows (3.7.1 as of last tutorial update):
+1. Download and install newest version of python3.6 for Windows (3.6.7 as of last tutorial update): 
+    
+    - https://www.python.org/downloads/release/python-367/
+  
+2. Setup PATH variable to Python install directory (possibly done during Python installation):  
 
-    https://www.python.org/downloads/release/python-371/
+    - System Properties -> Enviroment Variables -> Path -> Edit -> New     
+    - Enter %PYTHONPATH% from AppData  
+    
+3. Download & install MyHDL package version 0.10:
 
-2. Setup PATH variable to Python install directory (possibly done during Python installation):
+    - https://github.com/myhdl/myhdl  
+    - Clone or download -> Download  
+    `%MyHDL_PATH%/myhdl/test/core >> python setup.py install`  
 
-    System Properties >> Enviroment Variables >> Path >> Edit >> New
-    Type in %PYTHONPATH% from AppData
+4. Install other necessary packages:
 
-3. Download MyHDL package version 0.10:
+    - pytest: https://github.com/pytest-dev/pytest  
+    `>> %PYTEST_DIR% > python setup.py install`
+    - cpython: https://www.lfd.uci.edu/~gohlke/pythonlibs/#cython  
+    `>> %FILE_DIR% > python -m pip install %CPYTHON .WHL FILE%`
+    - numpy:  
+    `>> python -m pip install numpy`
 
-    https://github.com/myhdl/myhdl
-    Clone or download >> Download
+5. Download & install a Python IDE, recommended one is PyCharm:
+    - https://www.jetbrains.com/pycharm/download/#section=windows  
 
-4. Install MyHDL package: 
-
-    %MyHDL_PATH%/myhdl/test/core >> python setup.py install
-
-5. Install a Python IDE, recommended one is PyCharm:
-
-    https://www.jetbrains.com/pycharm/download/#section=windows
-
-6. Add MyHDL to Project Interpreter in IDE.
+6. Create a virtual environment with appropriate modules enabled.
