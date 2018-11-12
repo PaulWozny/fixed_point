@@ -14,7 +14,7 @@ Instructions for MyHDL installation on Windows:
 
     - https://github.com/myhdl/myhdl  
     - Clone or download -> Download  
-    `%MyHDL_PATH%/myhdl/test/core >> python setup.py install`  
+    `>> %MyHDL_PATH%/myhdl/test/core > python setup.py install`  
 
 4. Install other necessary packages:
 
@@ -23,9 +23,9 @@ Instructions for MyHDL installation on Windows:
     - cpython: https://www.lfd.uci.edu/~gohlke/pythonlibs/#cython  
     `>> %FILE_DIR% > python -m pip install %CPYTHON .WHL FILE%`
     - numpy:  
-    `>> python -m pip install numpy`
-    - matplotlib:
-    `>> python -m pip install matplotlib`
+    `> python -m pip install numpy`
+    - matplotlib:  
+    `> python -m pip install matplotlib`
 
 5. Download & install a Python IDE, recommended one is PyCharm:
     - https://www.jetbrains.com/pycharm/download/#section=windows  
