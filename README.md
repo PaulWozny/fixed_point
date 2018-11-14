@@ -5,16 +5,11 @@ Addidionaly, we would like to extend existing tutorial base  to quickstart begin
 
 #### QuickStart guide
 Go to *tutorial_[yourOS].md* and follow the instruction to install MyHDL on your computer.
-
-
----
 In order to install fixed_point module you have to navigate to its direcory and run following command:
-> sudo python2.7 setup.py install
-
-current state of work:
-- fixed_numbers module is written for py2.7 ?? __Works fine for me using 3.6 - AP__
-- myhdl is written for py3.6
-- 2to3 tool doesn't provide ready-to-use code
+> sudo python3 setup.py install
+---
+Current state of work:
+Eggs are compiled, woring on ToDo's left by previous contributor.
 ---
 
 ### Problems, Progress & Notes
@@ -48,14 +43,10 @@ quick workaroud:
 - ----||--- marix multiplication
 - methods of implementing
 
-
 #### ToDo (12.11.2018)
 - write instruction for instalation of MyHDL in ubuntu 18.04
 - get acquinted with fixed point documentation
 - force upgrade fixed_point module to 0.10 and create set of benches to benchmark performance
----
-- write readme in concise manner
-- lubie placki
 
 #### ToDo (19.11.2018)
 - Implement hardcoded multiplication of 4x4 matrices using fixed_point
