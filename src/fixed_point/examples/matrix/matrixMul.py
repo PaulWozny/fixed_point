@@ -36,11 +36,20 @@ import numpy
 
 # ---
 
-x1 = fixbv(0.54, min=-1, max=1, res=2**-15)
+x1 = fixbv(0.54, min=-1, max=1, res=2**-10)
 x2 = fixbv(0.22, min=-1, max=1, res=2**-15)
-print(hex(x1), hex(x2))
 
-# following expression yelds wrong result
-# it multiplies two numbers (0x451E * 0x1C28
-# which is equal to 79A14B0 ( 127538352 )
-print(float(x1 * x2))
+# The following works correctly:
+
+print("Testing fixbv math operations for x1 = {0}, x2 = {1}".format(x1._fval, x2._fval))
+print("x1 resolution = {0}, x2 resolution = {1}".format(x1.res, x2.res))
+
+x_mul = x1 * x2
+print("Result of multiplication: Value = {0}, Resolution = {1}".format(x_mul._fval, x_mul.res))
+
+x_add = x1 + x2
+print("Result of addition: Value = {0}, Resolution = {1}".format(x_add._fval, x_add.res))
+
+x_sub = x1 - x2
+print("Result of subtraction: Value = {0}, Resolution = {1}".format(x_sub._fval, x_sub.res))
+

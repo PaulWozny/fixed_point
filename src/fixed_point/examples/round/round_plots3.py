@@ -46,6 +46,6 @@ for rm in ROUND_MODES:
     sfmt = sfmt.replace('(', '_')
     sfmt = sfmt.replace(')', '')
     sfmt = sfmt.replace(',','_')
-    fig.savefig('plots/round_plot3_%s_%s.png'%(rm,sfmt))
+    fig.savefig('../round/plots/round_plot3_%s_%s.png'%(rm,sfmt))
 
 

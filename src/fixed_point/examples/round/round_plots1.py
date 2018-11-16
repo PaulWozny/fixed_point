@@ -39,6 +39,6 @@ for rm in ROUND_MODES:
     tax.set_ylabel('error', color='m')
     ax.legend(loc=2)
 
-    fig.savefig('round_%s.png'%(rm))
+    fig.savefig('../round/plots/round_%s.png'%(rm))
 
 

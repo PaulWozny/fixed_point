@@ -25,7 +25,7 @@ import copy
 
 import myhdl
 from fixed_point import _wformat
-from ._modes import ROUND_MODES,OVERFLOW_MODES
+from ._modes import ROUND_MODES, OVERFLOW_MODES
 from ._misc import check_myhdl_version
 
 SignalType = check_myhdl_version()
@@ -45,18 +45,18 @@ class fixbv(myhdl.intbv):
 
 
     """
-    
+
     def __init__(self,
-                 value,                     # initial default value
-                 min = None,                # Min value required
-                 max = None,                # Max value required
-                 res = None,                # Resolution required
-                 format = None,             # If preferred W notation W(wl,iwl)
-                 
+                 value,  # initial default value
+                 min=None,  # Min value required
+                 max=None,  # Max value required
+                 res=None,  # Resolution required
+                 format=None,  # If preferred W notation W(wl,iwl)
+
                  # these parameters only apply to the initial value rounding
                  # and overflow for the fixbv object
-                 round_mode = 'floor',      # Type of rounding to perform
-                 overflow_mode = 'saturate' # Type of overflow to perform
+                 round_mode='floor',  # Type of rounding to perform
+                 overflow_mode='saturate'  # Type of overflow to perform
                  ):
         """
         @todo comments
@@ -76,31 +76,33 @@ class fixbv(myhdl.intbv):
         """
 
         value = float(value)
-        
+
         # If the user does not specifiy ranges, determine the required
         # range.  Convert the bit lengths to the proper specification
         # for checking and extracting.  The bit lengths will be
         # recalculated based on the property specs and checked against
         # those supplied.
-        incomplete_spec = [kw is None for kw in (min,max,res)]
+        incomplete_spec = [kw is None for kw in (min, max, res)]
         if True in incomplete_spec:
             try:
                 if isinstance(format, _wformat.WFormat):
                     self._W = copy.copy(format)
                 elif isinstance(format, fixbv):
                     self._W = copy.copy(format._W)
-                elif isinstance(format, (tuple,list)):
+                elif isinstance(format, (tuple, list)):
                     self._W = _wformat.WFormat(*format)
                 else:
-                    raise ValueError("Invalid format type %s"%(type(format)))
-                wl,iwl,fwl = self._W.fmt
-                res=2.0**-fwl; min=-2**iwl; max=2**iwl
+                    raise ValueError("Invalid format type %s" % (type(format)))
+                wl, iwl, fwl = self._W.fmt
+                res = 2.0 ** -fwl;
+                min = -2 ** iwl;
+                max = 2 ** iwl
             except TypeError:
                 self._W = None
                 min, max, res = self._calc_min_max_res(value)
         else:
             self._W = None
-                
+
         # validate the range and resolution
         if max < 1 or abs(min) < 1:
             raise ValueError("Maximum and Minimum  has to be 1 or greater")
@@ -122,10 +124,9 @@ class fixbv(myhdl.intbv):
 
         # Calculate the integer and fractional widths
         ival = abs(min) if abs(min) > max else max
-        
-        (niwl, nfwl) = self._calc_width(ival, res)
-        nwl = niwl+nfwl+1
 
+        (niwl, nfwl) = self._calc_width(ival, res)
+        nwl = niwl + nfwl + 1
 
         if self._W is None:
             self._W = _wformat.WFormat(nwl, niwl)
@@ -140,7 +141,6 @@ class fixbv(myhdl.intbv):
             assert iwl == niwl, "calculation error, integer word length"
             assert fwl == nfwl, "calculation error, fractional word length"
 
-                        
         # We want a signed number but we don't want to force any
         # notion of a fixed point value to the lower levels.  From
         # the intbv point of view it only knows that it is a signed
@@ -148,8 +148,8 @@ class fixbv(myhdl.intbv):
         # But what should the min and max values be?  Well it should
         # what ever the min/max for the number of bits we are creating.        
         nrbits = self._iwl + self._fwl + 1
-        min    = -1 * 2**(nrbits-1)
-        max    = 2**(nrbits-1) 
+        min = -1 * 2 ** (nrbits - 1)
+        max = 2 ** (nrbits - 1)
         myhdl.intbv.__init__(self, 0, min=min, max=max)
         self._fval = value
 
@@ -159,36 +159,37 @@ class fixbv(myhdl.intbv):
 
         # make sure things were setup ok
         self._handleBounds()
-        
+
     ###################################################################### 
     # properties
     ######################################################################
     def _handleBounds(self):
         """ Check the bounds """
         myhdl.intbv._handleBounds(self)
-        
+
     @property
     def _fval(self):
         return self._to_float()
+
     @_fval.setter
-    def _fval(self,val):
+    def _fval(self, val):
         self._val = self._from_float(val)
 
     @property
     def _wl(self):
-        wl,iwl,fwl = self._W.fmt
+        wl, iwl, fwl = self._W.fmt
         return wl
-    
+
     @property
     def _iwl(self):
-        wl,iwl,fwl = self._W.fmt
+        wl, iwl, fwl = self._W.fmt
         return iwl
-    
+
     @property
     def _fwl(self):
-        wl,iwl,fwl = self._W.fmt
+        wl, iwl, fwl = self._W.fmt
         return fwl
-    
+
     @property
     def round_mode(self):
         return self._rm
@@ -199,24 +200,25 @@ class fixbv(myhdl.intbv):
 
     @property
     def res(self):
-        return 2**(-1*self._fwl)
-    
+        return 2 ** (-1 * self._fwl)
+
     @property
     def min(self):
-        return -2**(self._iwl)
+        return -2 ** (self._iwl)
 
     @property
     def max(self):
-        return 2**(self._iwl)
+        return 2 ** (self._iwl)
 
     @property
     def W(self):
         return self._W
+
     @W.setter
-    def W(self,val):
+    def W(self, val):
         self._W.fmt = val
         self._nrbits = self._wl
-    
+
     ###################################################################### 
     # overloaded functions
     ######################################################################
@@ -225,7 +227,7 @@ class fixbv(myhdl.intbv):
                        self.W,
                        round_mode=self._rm, overflow_mode=self._om)
         return retval
-    
+
     def __deepcopy__(self, visit):
         retval = fixbv(self._fval, self.min, self.max, self.res,
                        self.W,
@@ -265,17 +267,17 @@ class fixbv(myhdl.intbv):
         slc = myhdl.intbv(self._val, _nrbits=self._nrbits)
         # @todo: convert negative keys to the correct bit index
         return slc.__getitem__(key)
-        
+
     def __repr__(self):
         # fixbv(_fval, W=(%d,%d,%d))
-        rs = "fixbv(%f, "%(self._fval)
-        wl,iwl,fwl = self._W.fmt
-        fwl = wl-iwl-1
-        rs += " format=W(%d,%d,%d), " % (wl,iwl,fwl)
+        rs = "fixbv(%f, " % (self._fval)
+        wl, iwl, fwl = self._W.fmt
+        fwl = wl - iwl - 1
+        rs += " format=W(%d,%d,%d), " % (wl, iwl, fwl)
         rs += ")"
         # @todo: ? add integer value somewhere?
         return rs
-    
+
     def __str__(self):
         # For very large bit widths the resolution of the fixbv
         # will exceed those of a 64 bit value.  Need to use something
@@ -293,7 +295,7 @@ class fixbv(myhdl.intbv):
 
     def __float__(self):
         return self._fval
-    
+
     # The mathematical and bit operations will be handled by the underlying
     # intbv object.  This will be a different than the original implementation
     # which would adjust the bit widths of the output.  The intbv relies on
@@ -308,17 +310,25 @@ class fixbv(myhdl.intbv):
 
         c[:] = a * b
         """
+        ### APutyra 16.11.2018:
+        # Fixed to return fixbv object with correct value
+
         if isinstance(other, fixbv):
             iW = self.W * other.W
         else:
             raise TypeError("other must be fixbv: self*other")
-            
-        retval = fixbv(0, format=iW, round_mode=self.round_mode)
-        mul = myhdl.intbv(self._val) * other
-        retval.value = mul
-        return mul #retval
 
-    
+        mul = myhdl.intbv(self._val) * other
+        newres = self.res * other.res
+        value = mul * newres
+        retval = fixbv(value, format=iW, res=newres, round_mode=self.round_mode)
+        # print("fixbv mul debug: val_1: {0}, val_2: {1}, val_3: {2}, newres: {3}, value: {4}".format(self._val,
+        #                                                                                             other._val, mul,
+        #                                                                                             retval.res,
+        #                                                                                             retval._fval))
+
+        return retval
+
     def __add__(self, other):
         """
         Fixed-point addition is no different than normal signed binary
@@ -328,72 +338,104 @@ class fixbv(myhdl.intbv):
         assert that the points are aligned.
         c[:] = a + b
         """
-        if isinstance(other, fixbv):
-            assert self._fwl == other._fwl, "Add: Points not aligned %s == %s" % (repr(self), repr(other))
+        # @todo if other is not fixbv (int, long, intbv) convert to fixbv and perform the addition
+
+        ### APutyra 16.11.2018:
+        # Fixed to return object of fixbv class and added functionality for handling different resolutions.
+
+        # Checks which object has the lower (more precise) resolution.
+        # If object resolutions differ handles addition with new temporary object.
+        if self.res == other.res:
+            add = myhdl.intbv(self._val) + other
             iW = self.W + other.W
-        # @todo if other is not fixbv (int, long, intbv) convert to fixbv and
-        # perform the addition
+            tmpres = self.res
+        elif self.res < other.res:
+            tmpOther = fixbv(other._fval, format=self.W, res=self.res, round_mode=self.round_mode)
+            add = myhdl.intbv(self._val) + tmpOther
+            iW = self.W + tmpOther.W
+            tmpres = self.res
         else:
-            raise TypeError("other must be fixbv: self + other")
+            tmpSelf = fixbv(self._fval, format=other.W, res=other.res, round_mode=other.round_mode)
+            add = myhdl.intbv(tmpSelf._val) + other
+            iW = tmpSelf.W + other.W
+            tmpres = other.res
 
-        retval = fixbv(0, format=iW, round_mode=self.round_mode)
-        add = myhdl.intbv(self._val) + other
-        retval.value = add
-        return add #retval    
 
-    
+        value = add * tmpres
+        retval = fixbv(value, format=iW, round_mode=self.round_mode)
+        # print("fixbv add debug: add: {0}, tmpRes: {1}, value: {2}, res: {3}, _fval: {4}".format(add, tmpres, value,
+        #                                                                                         retval.res,
+        #                                                                                         retval._fval))
+
+        return retval
+
     def __sub__(self, other):
         """
         Same as addition just different
         c[:] = a - b
         """
-        if isinstance(other, fixbv):
-            assert self._fwl == other._fwl, "Sub: Points not aligned  %s == %s" % (repr(self), repr(other))
-            iW = self.W + other.W
-        # @todo if other is not fixbv (int, long, intbv) convert to fixbv and
-        # perform the addition
-        else:
-            raise TypeError("other must be fixbv: self*other")
 
-        retval = fixbv(0, format=iW, round_mode=self.round_mode)
-        sub = myhdl.intbv(self._val) - other
-        retval.value = sub
-        return sub #retval
+        ### APutyra 16.11.2018:
+        # Fixed to return object of fixbv class and added functionality for handling different resolutions.
+
+        # Checks which object has the lower (more precise) resolution.
+        # If object resolutions differ handles addition with new temporary object.
+        if self.res == other.res:
+            sub = myhdl.intbv(self._val) - other
+            iW = self.W + other.W
+            tmpres = self.res
+        elif self.res < other.res:
+            tmpOther = fixbv(other._fval, format=self.W, res=self.res, round_mode=self.round_mode)
+            sub = myhdl.intbv(self._val) - tmpOther
+            iW = self.W + tmpOther.W
+            tmpres = self.res
+        else:
+            tmpSelf = fixbv(self._fval, format=other.W, res=other.res, round_mode=other.round_mode)
+            sub = myhdl.intbv(tmpSelf._val) - other
+            iW = tmpSelf.W + other.W
+            tmpres = other.res
+
+        value = sub * tmpres
+        retval = fixbv(value, format=iW, round_mode=self.round_mode)
+        # print("fixbv sub debug: sub: {0}, tmpRes: {1}, value: {2}, res: {3}, _fval: {4}".format(sub, tmpres, value,
+        #                                                                                         retval.res,
+        #                                                                                         retval._fval))
+
+        return retval
 
     def __div__(self, other):
         assert False, "TODO"
 
     # use the underlying myhdl shifts
-    #def __lshift__(self, other):
+    # def __lshift__(self, other):
     #    retval = fixbv(0, min=self.min, max=self.max, res=self.res,
     #                     round_mode=self.round_mode)
     #    new = myhdl.intbv.__lshift__(self, other)  # returns intbv
     #    retval.value = new._val
     #    return retval
     #
-    #def __rlshift__(self, other):
+    # def __rlshift__(self, other):
     #    retval = fixbv(0, min=self.min, max=self.max, res=self.res,
     #                     round_mode=self.round_mode)
     #    new = myhdl.intbv.__rlshift__(self, other)  # returns intbv
     #    retval.value = new._val
     #    return retval
     #
-    #def __rshift__(self, other):
+    # def __rshift__(self, other):
     #    retval = fixbv(0, min=self.min, max=self.max, res=self.res,
     #                     round_mode=self.round_mode)
     #    new = myhdl.intbv.__rshift__(self, other)  # returns intbv
     #    retval.value = new._val
     #    return retval
     #
-    #def __rrshift__(self, other):
+    # def __rrshift__(self, other):
     #    retval = fixbv(0, min=self.min, max=self.max, res=self.res,
     #                     round_mode=self.round_mode)
     #    new = myhdl.intbv.__rrshift__(self, other)  # returns intbv
     #    retval.value = new._val
     #    return retval
 
-    
-    ###################################################################### 
+    ######################################################################
     # private methods
     ######################################################################
     def _calc_width(self, value, res=0):
@@ -402,7 +444,7 @@ class fixbv(myhdl.intbv):
 
         if res < frac or frac == 0:
             frac = res
-        
+
         if abs(integer) == 0:
             iw = 0
         else:
@@ -411,10 +453,9 @@ class fixbv(myhdl.intbv):
         if frac == 0:
             fw = 0
         else:
-            fw = math.ceil(math.log(frac**-1, 2))
+            fw = math.ceil(math.log(frac ** -1, 2))
 
         return (int(iw), int(fw))
-
 
     def _calc_min_max_res(self, fval):
         """Given floating point number calculate min, max and resolution
@@ -440,48 +481,45 @@ class fixbv(myhdl.intbv):
                     fnbits = 1
                 else:
                     fnbits = int(abs(math.floor(math.log(frac, 2)))) + 1
-            except :
+            except:
                 print("Fractional %s Integer %s" % (frac, integer))
                 print("Unexpected error:", sys.exc_info()[0])
                 raise
-            
+
         fnbits = 1 if fnbits == 0 else fnbits
         inbits = 1 if inbits == 0 else inbits
 
         res = 2 ** (-fnbits)
-        max = 2**(inbits-1)
-        min = -2**(inbits-1)
+        max = 2 ** (inbits - 1)
+        min = -2 ** (inbits - 1)
 
-        #print "Calc limits %f --> fnbits %d inbits %d, max %f, min %f, res %f" % (fval, fnbits, inbits, max, min, res)
+        # print "Calc limits %f --> fnbits %d inbits %d, max %f, min %f, res %f" % (fval, fnbits, inbits, max, min, res)
 
         # make sure limits are still applicable for the rounded version of fval
         # if the value doesn't fit need an extra integer bit.  This functions
         # is mainly used if bit constraints are not give (determine bit contraints
         # from value).  Adding extra bit (case of round_mode=truncate) is ok.
         if round(fval) >= max or round(fval) <= min:
-            max = 2**(inbits+1)
-            min = -2**(inbits+1)
-        
-        return min,max,res
+            max = 2 ** (inbits + 1)
+            min = -2 ** (inbits + 1)
 
-    
+        return min, max, res
+
     def _from_float(self, value):
         """Convert float value to fixed point"""
-        retval = self._round(value) 
+        retval = self._round(value)
         retval = self._overflow(retval)
         return retval
-        
 
     def _to_float(self):
         """Convert fixed point value to floating point number"""
         return float(self._val) / (2.0 ** self._fwl)
 
-
     def _overflow(self, value):
         """Handle overflow"""
         if self.overflow_mode == 'saturate':
             if value >= self._max:
-                retval = self._max-1
+                retval = self._max - 1
             elif value <= self._min:
                 retval = self._min
             else:
@@ -491,15 +529,14 @@ class fixbv(myhdl.intbv):
         else:
             raise ValueError
         return retval
-        
-        
+
     def _round(self, value):
         """Round the initial value if needed"""
         # Scale the value to the integer range (the underlying representation)
-        #print('   rnd[bs]: %f'%(value))
-        value = value * 2.0**self._fwl
-        #print('   rnd[as]: %f'%(value))
-        
+        # print('   rnd[bs]: %f'%(value))
+        value = value * 2.0 ** self._fwl
+        # print('   rnd[as]: %f'%(value))
+
         if self.round_mode == 'ceil':
             retval = math.ceil(value)
 
@@ -508,32 +545,32 @@ class fixbv(myhdl.intbv):
                 retval = math.floor(value)
             else:
                 retval = math.ceil(value)
-            #retval = int(value)
+            # retval = int(value)
 
         elif self.round_mode == 'floor':
             retval = math.floor(value)
 
         elif self.round_mode == 'nearest':
-            fval,ival = math.modf(value)
+            fval, ival = math.modf(value)
             if fval == .5:
-                retval = int(value+1) if value > 0 else int(value-1)
+                retval = int(value + 1) if value > 0 else int(value - 1)
             else:
                 retval = round(value)
 
         elif self.round_mode == 'round':
             retval = round(value)
-            
+
         elif self.round_mode == 'round_even' or self.round_mode == 'convergent':
-            fval,ival = math.modf(value)
+            fval, ival = math.modf(value)
             abs_ival = int(abs(ival))
-            
+
             if int(ival < 0):
                 sign = -1
             else:
                 sign = 1
 
             if (abs(fval) - 0.5) == 0.0:
-                if abs_ival%2 == 0:
+                if abs_ival % 2 == 0:
                     retval = abs_ival * sign
                 else:
                     retval = (abs_ival + 1) * sign
@@ -545,28 +582,27 @@ class fixbv(myhdl.intbv):
 
         return int(retval)
 
-
-#-#    ###################################################################### 
-#-#    # public methods
-#-#    ###################################################################### 
-#-#
-#-#    def range(self):
-#-#        """Print out the possbile value range of the number."""
-#-#        min = -2**self._iwl
-#-#        max = 2**self._iwl - 1.0 / 2.0**self._fwl
-#-#        s = "W%01d.%d:" % (self._iwl, self._fwl)
-#-#        s = s + " %f ... %f" % (min, max)
-#-#        return s
-#-#
-#-#
-#-#    def resolution(self):
-#-#        """Return the resolution of the fixed-point number."""
-#-#        res = 2**(-1.*self._fwl)
-#-#        s = "%f" % (res)
-#-#        return s
-#-#
-#-#        
-#-#    def bit(self):
-#-#        """Return number as a bit string."""
-#-#        wl,iwl,fwl = self._W.fmt
-#-#        return myhdl.bin(self, wl)
+# -#    ######################################################################
+# -#    # public methods
+# -#    ######################################################################
+# -#
+# -#    def range(self):
+# -#        """Print out the possbile value range of the number."""
+# -#        min = -2**self._iwl
+# -#        max = 2**self._iwl - 1.0 / 2.0**self._fwl
+# -#        s = "W%01d.%d:" % (self._iwl, self._fwl)
+# -#        s = s + " %f ... %f" % (min, max)
+# -#        return s
+# -#
+# -#
+# -#    def resolution(self):
+# -#        """Return the resolution of the fixed-point number."""
+# -#        res = 2**(-1.*self._fwl)
+# -#        s = "%f" % (res)
+# -#        return s
+# -#
+# -#
+# -#    def bit(self):
+# -#        """Return number as a bit string."""
+# -#        wl,iwl,fwl = self._W.fmt
+# -#        return myhdl.bin(self, wl)

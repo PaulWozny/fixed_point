@@ -44,6 +44,6 @@ for format in formats:
         sfmt = sfmt.replace('(', '_')
         sfmt = sfmt.replace(')', '')
         sfmt = sfmt.replace(',','_')
-        fig.savefig('plots/round_plots2_%s_%s.png'%(rm,sfmt))
+        fig.savefig('../round/plots/round_plots2_%s_%s.png'%(rm,sfmt))
 
 

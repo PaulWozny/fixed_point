@@ -1,7 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="847a41bf-6bda-48dd-a64f-22f60f49db96" name="Default Changelist" comment="test" />
+    <list default="true" id="847a41bf-6bda-48dd-a64f-22f60f49db96" name="Default Changelist" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/build/lib/fixed_point/_fixbv.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/build/lib/fixed_point/_fixbv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/dist/fixed_point-0.1.dev0-py3.6.egg" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/dist/fixed_point-0.1.dev0-py3.6.egg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/matrix/matrixMul.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/examples/matrix/matrixMul.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plot3_ceil_WFormat_4_3_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plot3_convergent_WFormat_4_3_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plot3_fix_WFormat_4_3_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plot3_floor_WFormat_4_3_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plot3_nearest_WFormat_4_3_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plot3_round_WFormat_4_3_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plot3_round_even_WFormat_4_3_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_ceil_WFormat_4_0_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_ceil_WFormat_4_1_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_ceil_WFormat_4_2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_ceil_WFormat_4_3_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_convergent_WFormat_4_0_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_convergent_WFormat_4_1_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_convergent_WFormat_4_2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_convergent_WFormat_4_3_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_fix_WFormat_4_0_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_fix_WFormat_4_1_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_fix_WFormat_4_2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_fix_WFormat_4_3_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_floor_WFormat_4_0_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_floor_WFormat_4_1_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_floor_WFormat_4_2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_floor_WFormat_4_3_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_nearest_WFormat_4_0_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_nearest_WFormat_4_1_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_nearest_WFormat_4_2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_nearest_WFormat_4_3_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_round_WFormat_4_0_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_round_WFormat_4_1_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_round_WFormat_4_2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_round_WFormat_4_3_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_round_even_WFormat_4_0_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_round_even_WFormat_4_1_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_round_even_WFormat_4_2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/plots/round_plots2_round_even_WFormat_4_3_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/round_ceil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/round_convergent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/round_fix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/round_floor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/round_nearest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/round_plots1.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/examples/round/round_plots1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/round_plots2.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/examples/round/round_plots2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/round_plots3.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/examples/round/round_plots3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/round_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/round/round_round_even.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/fixed_point.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/fixed_point.egg-info/SOURCES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/fixed_point.egg-info/dependency_links.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/fixed_point.egg-info/dependency_links.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/fixed_point.egg-info/requires.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/fixed_point.egg-info/requires.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/fixed_point.egg-info/top_level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/fixed_point.egg-info/top_level.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myhdl-0.10/example/manual/tb_Inc.v" beforeDir="false" afterPath="$PROJECT_DIR$/myhdl-0.10/example/manual/tb_Inc.v" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,13 +65,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/src$test_wformat.coverage" NAME="test_wformat Coverage Results" MODIFIED="1542043868992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test" />
-    <SUITE FILE_PATH="coverage/src$sos.coverage" NAME="sos Coverage Results" MODIFIED="1542040887226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/sos" />
-    <SUITE FILE_PATH="coverage/src$round_plots2.coverage" NAME="round_plots2 Coverage Results" MODIFIED="1542042582868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round" />
+    <SUITE FILE_PATH="coverage/src$test_wformat.coverage" NAME="test_wformat Coverage Results" MODIFIED="1542373399321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fixed_point/examples/matrix" />
+    <SUITE FILE_PATH="coverage/src$sos.coverage" NAME="sos Coverage Results" MODIFIED="1542372569445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fixed_point/examples/matrix" />
+    <SUITE FILE_PATH="coverage/src$round_plots2.coverage" NAME="round_plots2 Coverage Results" MODIFIED="1542373294675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fixed_point/examples/matrix" />
     <SUITE FILE_PATH="coverage/src$test_fixbv.coverage" NAME="test_fixbv Coverage Results" MODIFIED="1542042697540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test" />
     <SUITE FILE_PATH="coverage/src$round_plots3.coverage" NAME="round_plots3 Coverage Results" MODIFIED="1542041821319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round" />
-    <SUITE FILE_PATH="coverage/src$test_fixed.coverage" NAME="test_fixed Coverage Results" MODIFIED="1542042720985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test" />
-    <SUITE FILE_PATH="coverage/src$round_plots1.coverage" NAME="round_plots1 Coverage Results" MODIFIED="1542042466674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round" />
+    <SUITE FILE_PATH="coverage/src$test_fixed.coverage" NAME="test_fixed Coverage Results" MODIFIED="1542373389652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fixed_point/examples/matrix" />
+    <SUITE FILE_PATH="coverage/src$round_plots1.coverage" NAME="round_plots1 Coverage Results" MODIFIED="1542373211664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fixed_point/examples/matrix" />
+    <SUITE FILE_PATH="coverage/src$matrixMul.coverage" NAME="matrixMul Coverage Results" MODIFIED="1542374915133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fixed_point/examples/matrix" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="308729479">
@@ -59,73 +130,60 @@
     <session id="-1271064063">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.36" value="2" />
+          <entry key="project.open.time.47" value="1" />
+          <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="20" />
+          <entry key="png" value="1" />
+          <entry key="py" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="20" />
+          <entry key="Image" value="1" />
+          <entry key="Python" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="40" />
-          <entry key="py" value="1007" />
+          <entry key="py" value="3237" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1047" />
+          <entry key="Python" value="3277" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test/test_wformat.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1734">
-              <caret line="102" column="19" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test/test_fixbv.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2227">
-              <caret line="134" column="9" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test/test_fixed.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/sos/sos.py">
+        <entry file="file://$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-              <folding>
-                <element signature="e#201#216#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="47">
+              <caret line="374" column="20" lean-forward="true" selection-start-line="374" selection-start-column="20" selection-end-line="374" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fixed_point/examples/matrix/matrixMul.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -147,6 +205,7 @@
       <find>roun</find>
       <find>round</find>
       <find>max</find>
+      <find>_val</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,6 +225,11 @@
         <option value="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point/_fixbv.py" />
         <option value="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test/test_fixbv.py" />
         <option value="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test/test_wformat.py" />
+        <option value="$PROJECT_DIR$/fixed_point/examples/round/round_plots1.py" />
+        <option value="$PROJECT_DIR$/fixed_point/examples/round/round_plots2.py" />
+        <option value="$PROJECT_DIR$/fixed_point/examples/round/round_plots3.py" />
+        <option value="$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py" />
+        <option value="$PROJECT_DIR$/fixed_point/examples/matrix/matrixMul.py" />
       </list>
     </option>
   </component>
@@ -187,6 +251,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,37 +262,42 @@
             <path>
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cfelton-fixed_point-d036acd5e2e4" type="462c0819:PsiDirectoryNode" />
+              <item name="fixed_point" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cfelton-fixed_point-d036acd5e2e4" type="462c0819:PsiDirectoryNode" />
+              <item name="fixed_point" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cfelton-fixed_point-d036acd5e2e4" type="462c0819:PsiDirectoryNode" />
+              <item name="fixed_point" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="sos" type="462c0819:PsiDirectoryNode" />
+              <item name="matrix" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cfelton-fixed_point-d036acd5e2e4" type="462c0819:PsiDirectoryNode" />
+              <item name="fixed_point" type="462c0819:PsiDirectoryNode" />
+              <item name="fixed_point" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="fixed_point" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../PyCharm/myhdlenv36" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/fixed_point/examples/matrix/matrixMul.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -247,30 +317,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_wformat">
-    <configuration name="round_plots1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.matrixMul">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="src" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="C:\Users\User\Documents\Python\PyCharm\myhdlenv36\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fixed_point/examples/matrix" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_plots1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fixed_point/examples/matrix/matrixMul.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="round_plots2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="matrixMul" type="PythonConfigurationType" factoryName="Python">
       <module name="src" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -278,37 +348,15 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fixed_point/examples/matrix" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_plots2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fixed_point/examples/matrix/matrixMul.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_fixbv" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="src" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test/test_fixbv.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
@@ -321,16 +369,16 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test" />
+      <option name="SDK_HOME" value="C:\Users\User\Documents\Python\PyCharm\myhdlenv36\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fixed_point/examples/matrix" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test/test_fixed.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fixed_point/test/test_fixed.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
@@ -343,25 +391,23 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test" />
+      <option name="SDK_HOME" value="C:\Users\User\Documents\Python\PyCharm\myhdlenv36\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fixed_point/examples/matrix" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test/test_wformat.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fixed_point/test/test_wformat.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.round_plots1" />
-      <item itemvalue="Python.round_plots2" />
-      <item itemvalue="Python.test_fixbv" />
+      <item itemvalue="Python.matrixMul" />
       <item itemvalue="Python.test_fixed" />
       <item itemvalue="Python.test_wformat" />
     </list>
@@ -369,9 +415,6 @@
       <list>
         <item itemvalue="Python.test_wformat" />
         <item itemvalue="Python.test_fixed" />
-        <item itemvalue="Python.test_fixbv" />
-        <item itemvalue="Python.round_plots2" />
-        <item itemvalue="Python.round_plots1" />
       </list>
     </recent_temporary>
   </component>
@@ -391,7 +434,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17777778" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23809524" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -410,9 +453,32 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32936507" />
       <window_info anchor="right" id="SciView" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18015873" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4984127" weight="0.34615386" />
+      <window_info active="true" anchor="bottom" x="268" y="334" width="956" height="279" id="Run" order="2" sideWeight="0.49920633" visible="true" weight="0.34923077" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32923076" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50079364" side_tool="true" weight="0.40615386" />
+      <window_info anchor="bottom" auto_hide="true" id="Python Console" order="10" weight="0.3276923" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -425,79 +491,23 @@
     <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myhdl-0.10-maintenance/example/manual/bin2gray.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/sos/dummy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myhdl-0.10-maintenance/example/manual/hello1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/myhdl-0.10-maintenance/example/manual/bin2gray.py" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/sos/dummy.py" />
+    <entry file="file://$PROJECT_DIR$/myhdl-0.10-maintenance/example/manual/hello1.py" />
     <entry file="jar:///usr/local/lib/python3.6/dist-packages/fixed_point-0.1.dev0-py3.6.egg!/fixed_point/_wformat.py" />
     <entry file="file:///usr/lib/python3/dist-packages/setuptools/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point/_fixbv.py.bak">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point.egg-info/requires.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point.egg-info/dependency_links.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/sos/HelloWorld.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_plots3.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_round_even.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_round.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_nearest.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_floor.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_fix.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/setup.py" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point/_fixbv.py.bak" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point.egg-info/requires.txt" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point.egg-info/dependency_links.txt" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/sos/HelloWorld.py" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_plots3.py" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_round_even.png" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_round.png" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_nearest.png" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_floor.png" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_fix.png" />
     <entry file="file://$PROJECT_DIR$/build/lib.linux-x86_64-2.7/fixed_point/_fixed.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -505,9 +515,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_convergent.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_convergent.png" />
     <entry file="file:///usr/local/lib/python3.6/dist-packages/myhdl/_always.py" />
     <entry file="file:///usr/local/lib/python3.6/dist-packages/myhdl/_instance.py" />
     <entry file="file:///usr/lib/python3.6/ast.py" />
@@ -522,13 +530,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/build/lib/fixed_point/_fixbv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3527">
-          <caret line="129" column="31" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/build/lib/fixed_point/_fixbv.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/myhdl-0.10-py3.6.egg/myhdl/_Signal.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -536,71 +538,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myhdl-0.10-maintenance/myhdl/_intbv.py">
+    <entry file="file://$PROJECT_DIR$/myhdl-0.10-maintenance/myhdl/_intbv.py" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_plots2.py" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_plots1.py" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point/_wformat.py" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point/_fixed.py" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point/_fixbv.py" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test/test_wformat.py" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test/test_fixbv.py" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/sos/sos.py" />
+    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test/test_fixed.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/myhdl-0.10-py3.6.egg/myhdl/_intbv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2977">
+          <caret line="30" column="54" lean-forward="true" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixed_point/fixed_point/_wformat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixed_point/examples/sos/sos.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_plots2.py">
+    <entry file="file://$PROJECT_DIR$/fixed_point/examples/round/plots/round_ceil.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixed_point/examples/round/round_plots1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+        <state relative-caret-position="262">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round/round_plots1.py">
+    <entry file="file://$PROJECT_DIR$/fixed_point/examples/round/round_plots2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        <state relative-caret-position="222">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point/_wformat.py">
+    <entry file="file://$PROJECT_DIR$/fixed_point/examples/round/round_plots3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="161" column="23" selection-start-line="161" selection-start-column="23" selection-end-line="161" selection-end-column="23" />
+        <state relative-caret-position="222">
+          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point/_fixed.py">
+    <entry file="file://$PROJECT_DIR$/fixed_point/test/test_fixbv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="103" column="16" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="16" />
+        <state relative-caret-position="102">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point/_fixbv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="451" column="27" selection-start-line="451" selection-start-column="27" selection-end-line="451" selection-end-column="27" />
-          <folding>
-            <element signature="e#749#759#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test/test_wformat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="102" column="19" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test/test_fixbv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2227">
-          <caret line="134" column="9" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test/test_fixed.py">
+    <entry file="file://$PROJECT_DIR$/fixed_point/test/test_fixed.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/sos/sos.py">
+    <entry file="file://$PROJECT_DIR$/fixed_point/test/test_wformat.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixed_point/examples/matrix/matrixMul.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-          <folding>
-            <element signature="e#201#216#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="211">
+          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="374" column="20" lean-forward="true" selection-start-line="374" selection-start-column="20" selection-end-line="374" selection-end-column="20" />
         </state>
       </provider>
     </entry>
