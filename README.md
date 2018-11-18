@@ -32,7 +32,12 @@ quick workaroud:
               - This is further proven by sign bit handling (keeping 2 sign bits seems lazy and likely means original creator ignored them in wformat __mul__).
 - Other fixes to obvious syntax errors (due to 3.6 port or previous user error)  
       - New build of fixed_point (new egg) included in current package (12.11.18)
-  
+- fixbv fixes: 
+    - __mul__ now rounds result to highest res from inputs
+    - __add__ & __sub__ now maintain their iwl as their tmp version for calculation (fixes overflow, my previous implementation changed both iwl and fwl to that of the one with higher res);
+    - __calc_width__ fixed for high powers (imprecision with math.log) ?? might need to look into __calc_min_max_res__, also uses math.log but with math.floor
+    - added getFloat
+- added testBench for math operations on fixbv objects
 
 
 
