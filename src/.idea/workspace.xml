@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="847a41bf-6bda-48dd-a64f-22f60f49db96" name="Default Changelist" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixed_point/fixed_point/_wformat.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/fixed_point/_wformat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/build/lib/fixed_point/_fixbv.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/build/lib/fixed_point/_fixbv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/build/lib/fixed_point/_wformat.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/build/lib/fixed_point/_wformat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/dist/fixed_point-0.1.dev0-py3.6.egg" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/dist/fixed_point-0.1.dev0-py3.6.egg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point/examples/matrix/mathOperationsTB.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/examples/matrix/mathOperationsTB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myhdl-0.10/example/manual/tb_Inc.v" beforeDir="false" afterPath="$PROJECT_DIR$/myhdl-0.10/example/manual/tb_Inc.v" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +22,7 @@
     <SUITE FILE_PATH="coverage/src$test_fixbv.coverage" NAME="test_fixbv Coverage Results" MODIFIED="1542042697540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/test" />
     <SUITE FILE_PATH="coverage/src$round_plots3.coverage" NAME="round_plots3 Coverage Results" MODIFIED="1542041821319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/round" />
     <SUITE FILE_PATH="coverage/src$test_fixed.coverage" NAME="test_fixed Coverage Results" MODIFIED="1542373389652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fixed_point/examples/matrix" />
-    <SUITE FILE_PATH="coverage/src$mathOperationsTB.coverage" NAME="mathOperationsTB Coverage Results" MODIFIED="1542580463112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fixed_point/examples/matrix" />
+    <SUITE FILE_PATH="coverage/src$mathOperationsTB.coverage" NAME="mathOperationsTB Coverage Results" MODIFIED="1542581817961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fixed_point/examples/matrix" />
     <SUITE FILE_PATH="coverage/src$round_plots1.coverage" NAME="round_plots1 Coverage Results" MODIFIED="1542373211664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fixed_point/examples/matrix" />
     <SUITE FILE_PATH="coverage/src$matrixMul.coverage" NAME="matrixMul Coverage Results" MODIFIED="1542374915133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fixed_point/examples/matrix" />
   </component>
@@ -80,7 +82,7 @@
     <session id="-1271064063">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.27" value="1" />
@@ -108,12 +110,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="220" />
-          <entry key="py" value="6229" />
+          <entry key="py" value="7039" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="6449" />
+          <entry key="Python" value="7259" />
         </counts>
       </usages-collector>
     </session>
@@ -123,20 +125,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="322" column="33" lean-forward="true" selection-start-line="322" selection-start-column="33" selection-end-line="322" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fixed_point/examples/matrix/mathOperationsTB.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="149">
+              <caret line="487" column="66" lean-forward="true" selection-start-line="487" selection-start-column="66" selection-end-line="487" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -182,9 +172,9 @@
         <option value="$PROJECT_DIR$/fixed_point/examples/round/round_plots2.py" />
         <option value="$PROJECT_DIR$/fixed_point/examples/round/round_plots3.py" />
         <option value="$PROJECT_DIR$/fixed_point/examples/matrix/matrixMul.py" />
-        <option value="$PROJECT_DIR$/fixed_point/examples/matrix/mathOperationsTB.py" />
         <option value="$PROJECT_DIR$/fixed_point/fixed_point/_wformat.py" />
         <option value="$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py" />
+        <option value="$PROJECT_DIR$/fixed_point/examples/matrix/mathOperationsTB.py" />
       </list>
     </option>
   </component>
@@ -421,7 +411,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1316" height="773" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2468153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -590,16 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixed_point/examples/matrix/mathOperationsTB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fixed_point/fixed_point/_wformat.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="603">
@@ -607,10 +586,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fixed_point/examples/matrix/mathOperationsTB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="322" column="33" lean-forward="true" selection-start-line="322" selection-start-column="33" selection-end-line="322" selection-end-column="33" />
+        <state relative-caret-position="149">
+          <caret line="487" column="66" lean-forward="true" selection-start-line="487" selection-start-column="66" selection-end-line="487" selection-end-column="66" />
         </state>
       </provider>
     </entry>

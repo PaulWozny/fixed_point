@@ -132,11 +132,13 @@ class fixbv(myhdl.intbv):
             self._W = _wformat.WFormat(nwl, niwl)
         else:
             wl, iwl, fwl = self._W.fmt
-            # tmptest = ">> Before: _W.wl={0}, _W.iwl={1}, _W.fwl={2}, nwl={3}, niwl={4}, nfwl={5}".format(self._W._wl, self._W._iwl, self._W._fwl, nwl, niwl, nfwl)
-            # print(tmptest)
-            # tmptest = ">> Before: min={0}, max={1}, ival={2}, res={3}, niwl={4}, nfwl={5}".format(min, max, ival, res,
-            #                                                                                    niwl, nfwl)
-            # print(tmptest)
+
+            # if wl != nwl:
+            #     tmptest = ">>Before: _W.wl={0}, _W.iwl={1}, _W.fwl={2}, nwl={3}, niwl={4}, nfwl={5}".format(self._W._wl, self._W._iwl, self._W._fwl, nwl, niwl, nfwl)
+            #     print(tmptest)
+            #     tmptest = ">>Before: min={0}, max={1}, ival={2}, res={3}".format(min, max, ival, res)
+            #     print(tmptest)
+
             assert wl == nwl, "calculation error, word length"
             assert iwl == niwl, "calculation error, integer word length"
             assert fwl == nfwl, "calculation error, fractional word length"
@@ -174,6 +176,10 @@ class fixbv(myhdl.intbv):
     @_fval.setter
     def _fval(self, val):
         self._val = self._from_float(val)
+
+    @property
+    def get_float(self):
+        return self._fval
 
     @property
     def _wl(self):
@@ -321,7 +327,7 @@ class fixbv(myhdl.intbv):
         mul = myhdl.intbv(self._val) * other
         newres = self.res * other.res
         value = mul * newres
-        retval = fixbv(value, format=iW, res=newres, round_mode=self.round_mode)
+        retval = fixbv(value, format=iW, round_mode=self.round_mode)
         # print("fixbv mul debug: val_1: {0}, val_2: {1}, val_3: {2}, newres: {3}, value: {4}".format(self._val,
         #                                                                                             other._val, mul,
         #                                                                                             retval.res,
@@ -350,12 +356,18 @@ class fixbv(myhdl.intbv):
             iW = self.W + other.W
             tmpres = self.res
         elif self.res < other.res:
-            tmpOther = fixbv(other._fval, format=self.W, res=self.res, round_mode=self.round_mode)
+            iwlTmp = other._iwl
+            fwlTmp = self._fwl
+            wlTmp = iwlTmp + fwlTmp + 1
+            tmpOther = fixbv(other._fval, format=(wlTmp, iwlTmp, fwlTmp), round_mode=self.round_mode)
             add = myhdl.intbv(self._val) + tmpOther
             iW = self.W + tmpOther.W
             tmpres = self.res
         else:
-            tmpSelf = fixbv(self._fval, format=other.W, res=other.res, round_mode=other.round_mode)
+            iwlTmp = self._iwl
+            fwlTmp = other._fwl
+            wlTmp = iwlTmp + fwlTmp + 1
+            tmpSelf = fixbv(self._fval, format=(wlTmp, iwlTmp, fwlTmp), round_mode=other.round_mode)
             add = myhdl.intbv(tmpSelf._val) + other
             iW = tmpSelf.W + other.W
             tmpres = other.res
@@ -385,12 +397,18 @@ class fixbv(myhdl.intbv):
             iW = self.W + other.W
             tmpres = self.res
         elif self.res < other.res:
-            tmpOther = fixbv(other._fval, format=self.W, res=self.res, round_mode=self.round_mode)
+            iwlTmp = other._iwl
+            fwlTmp = self._fwl
+            wlTmp = iwlTmp + fwlTmp + 1
+            tmpOther = fixbv(other._fval, format=(wlTmp, iwlTmp, fwlTmp), round_mode=self.round_mode)
             sub = myhdl.intbv(self._val) - tmpOther
             iW = self.W + tmpOther.W
             tmpres = self.res
         else:
-            tmpSelf = fixbv(self._fval, format=other.W, res=other.res, round_mode=other.round_mode)
+            iwlTmp = self._iwl
+            fwlTmp = other._fwl
+            wlTmp = iwlTmp + fwlTmp + 1
+            tmpSelf = fixbv(self._fval, format=(wlTmp, iwlTmp, fwlTmp), round_mode=other.round_mode)
             sub = myhdl.intbv(tmpSelf._val) - other
             iW = tmpSelf.W + other.W
             tmpres = other.res
@@ -449,11 +467,19 @@ class fixbv(myhdl.intbv):
             iw = 0
         else:
             iw = math.ceil(math.log(abs(integer), 2))
+            # This deals with the imprecision of math.log for large powers
+            # (i.e. math.ceil(math.log(2**39, 2))=40)
+            if integer <= 2**(iw-1):
+                iw = iw - 1
 
         if frac == 0:
             fw = 0
         else:
             fw = math.ceil(math.log(frac ** -1, 2))
+            # This deals with the imprecision of math.log for large powers
+            # (i.e. math.ceil(math.log((2**-39)**-1, 2))=40)
+            if frac**-1 <= 2**(fw-1):
+                fw = fw - 1
 
         return (int(iw), int(fw))
 

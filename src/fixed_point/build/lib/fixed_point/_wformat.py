@@ -15,7 +15,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# Twoja stara zapierdala
 """
 """
 
@@ -162,8 +161,15 @@ class WFormat(object):
         # iwl = wl-fwl-1
 
         iwl = self._iwl + other._iwl
-        fwl = self._fwl + other._fwl
+
+        # Previous fwl calculation, causes it to grow very fast
+        # i.e. for inputs of res 2**-32 and 2**-16 result will be rounded to 2**-48
+        # fwl = self._fwl + other._fwl
+        # New calc - rounds the number to the highest res. from the inputs
+        # i.e. for inputs of res 2**-32 and 2**-16 result will be rounded to 2**-32
+        fwl = max(self._fwl, other._fwl)
+
         wl = iwl + fwl + 1
         # print('M: ',wl,iwl,fwl)
-        return WFormat(wl,iwl,fwl)
+        return WFormat(wl, iwl, fwl)
 
