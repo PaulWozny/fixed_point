@@ -5,30 +5,39 @@ Addidionaly, we would like to extend existing tutorial base  to quickstart begin
 
 #### QuickStart guide
 Go to *tutorial_[yourOS].md* and follow the instruction to install MyHDL on your computer.
-
-
----
 In order to install fixed_point module you have to navigate to its direcory and run following command:
-> sudo python2.7 setup.py install
-
-current state of work:
-- fixed_numbers module is written for py2.7
-- myhdl is written for py3.6
-- 2to3 tool doesn't provide ready-to-use code
+> sudo python3 setup.py install
+---
+Current state of work:
+Eggs are compiled, woring on ToDo's left by previous contributor.
 ---
 
-### Problems xd
-- Problem with WFormat (incompatibile syntax of py2.7
+### Problems, Progress & Notes
+- Problem with WFormat (incompatibile syntax of py2.7)
 quick workaroud:
     - change sys libraries -> recompile to egg or
     - import local module 
 - Problem with async in new python (myhdl/test/core functions)
 - Build from current files into new egg to fix old python version compatibility issues via:
-> Remove current build 
-> sudo python3.6 setup.py install
->Use in *fixed_point* library
-Old build supplied in repository is outdated
-
+    - Remove current build 
+    `>> sudo python3.6 setup.py install`
+    - Use in *fixed_point* library
+    - Old build supplied in repository is outdated  
+-  Workaround for building eggs after each debuf process:
+    `>> python setup.py develop`
+- Wformat previously handled __mul__ while keep 2 sign bits, and one was then counted as a iwl due to bad arithmetic. Main problem of 12.11.18
+  previous handling left/commented out just in case/as an artifact  
+      - Test bench for wformat modified to reflect this change
+      - !@!Comments in code seem to hint that negative numbers are not handled for multiplication!@!  
+              - This is further proven by sign bit handling (keeping 2 sign bits seems lazy and likely means original creator ignored them in wformat __mul__).
+- Other fixes to obvious syntax errors (due to 3.6 port or previous user error)  
+      - New build of fixed_point (new egg) included in current package (12.11.18)
+- fixbv fixes: 
+    - __mul__ now rounds result to highest res from inputs
+    - __add__ & __sub__ now maintain their iwl as their tmp version for calculation (fixes overflow, my previous implementation changed both iwl and fwl to that of the one with higher res);
+    - __calc_width__ fixed for high powers (imprecision with math.log) ?? might need to look into __calc_min_max_res__, also uses math.log but with math.floor
+    - added getFloat
+- added testBench for math operations on fixbv objects
 
 
 
@@ -39,11 +48,13 @@ Old build supplied in repository is outdated
 - ----||--- marix multiplication
 - methods of implementing
 
-
 #### ToDo (12.11.2018)
 - write instruction for instalation of MyHDL in ubuntu 18.04
 - get acquinted with fixed point documentation
 - force upgrade fixed_point module to 0.10 and create set of benches to benchmark performance
----
-- write readme in concise manner
-- lubie placki
+
+#### ToDo (19.11.2018)
+- Implement hardcoded multiplication of 4x4 matrices using fixed_point
+- Scale multiplication functionality to varied input parameters
+- Add screenshots to tutorials for more professional experience [Windows +]
+
