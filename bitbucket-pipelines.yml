@@ -11,7 +11,7 @@ pipelines:
         caches:
           - pip
         script: # Modify the commands below to build your repository.
-  #        - pip install myhdl
-          - python3 ./src/myhdl-0.10/setup.py develop
+          - pip install myhdl
+       #   - python3 ./src/myhdl-0.10/setup.py develop - this line breaks pipline
           - python3 ./src/fixed_point/setup.py develop
           - python -m unittest discover tests/
