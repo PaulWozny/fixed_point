@@ -64,8 +64,8 @@ y2 = fixbv(0.12, min=-1, max=1, res=2**-15)
 y3 = fixbv(0.15, min=-1, max=1, res=2**-15)
 y4 = fixbv(0.32, min=-1, max=1, res=2**-15)
 
-a =[[q1._fval, q2._fval], [q3._fval, q4._fval]]
-b =[[y1._fval, y2._fval], [y3._fval, y4._fval]]
+#a =[[q1._fval, q2._fval], [q3._fval, q4._fval]]
+# b =[[y1._fval, y2._fval], [y3._fval, y4._fval]]
 
 #a =[[q1, q2], [q3, q4]]
 #b =[[y1, y2], [y3, y4]]
@@ -80,12 +80,62 @@ b =[[y1._fval, y2._fval], [y3._fval, y4._fval]]
 #print (numpy.matmul(a,b))
 
 
-ress = fixbv(0, min=-1, max=1, res=2**-15)
+# ress = fixbv(0, min=-1, max=1, res=2**-15)
 
-result=[[ress._fval, ress._fval], [ress._fval, ress._fval]]
-#result=[[ress, ress], [ress, ress]]
+# result=[[ress._fval, ress._fval], [ress._fval, ress._fval]]
+# result=[[ress, ress], [ress, ress]]
 
 
+
+
+
+
+# c00 = a[0][0]*b[0][0]+a[0][1]*b[1][0]
+# print(c00)
+# c01 = a[0][0]*b[0][1]+a[0][1]*b[1][1]
+# print(c01)
+# c10 = a[1][0]*b[0][0]+a[1][1]*b[1][0]
+# print(c10)
+# c11 = a[1][0]*b[0][1]+a[1][1]*b[1][1]
+# print(c11)
+# print(c11._fval)
+
+
+#Fixed matrix multiplication
+# a = [[q1, q2],
+#      [q3, q4]]
+# b = [[y1, y2],
+#      [y3, y4]]
+result = numpy.zeros([2, 2], dtype=fixbv)
+a = numpy.array([[q1, q2], [q3, q4]], dtype=fixbv)
+b = numpy.array([[y1, y2], [y3, y4]], dtype=fixbv)
+
+c00 = (a[0][0] * b[0][0])#+ (a[0][1] * b[1][0])
+#print(c00)
+c01 = a[0][0] * b[0][1] + a[0][1] * b[1][1]
+#print(c01)
+c10 = a[1][0] * b[0][0] + a[1][1] * b[1][0]
+#print(c10)
+c11 = a[1][0] * b[0][1] + a[1][1] * b[1][1]
+#print(c11)
+
+c22 = [c00, c01, c10, c11]
+# c23 = bytearray
+
+print(c00, c01)
+print(c10, c11)
+#print(c22[0])
+
+# a = numpy.array([[q1, q2], [q3, q4]], dtype=fixbv)
+# b = numpy.array([[y1, y2], [y3, y4]], dtype=fixbv)
+
+
+print(a[0][0])
+print(b[0][0])
+c= a*b
+print(c)
+
+#print(a*b)
 
 for i in range(len(a)):
    # iterate through columns of Y
@@ -93,6 +143,5 @@ for i in range(len(a)):
        # iterate through rows of Y
        for k in range(len(b)):
            result[i][j] += a[i][k] * b[k][j]
-print(result)
 for r in result:
    print(r)
