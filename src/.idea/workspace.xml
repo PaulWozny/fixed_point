@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="847a41bf-6bda-48dd-a64f-22f60f49db96" name="Default Changelist" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fixed_point/examples/matrix/matrixMul.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point/examples/matrix/matrixMul.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,28 +120,29 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="2" />
+          <entry key="py" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="2" />
+          <entry key="Python" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="659" />
+          <entry key="py" value="2448" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="659" />
+          <entry key="Python" value="2448" />
         </counts>
       </usages-collector>
     </session>
@@ -150,8 +152,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7223">
-              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+            <state relative-caret-position="154">
+              <caret line="230" column="20" selection-start-line="230" selection-start-column="20" selection-end-line="230" selection-end-column="20" />
+              <folding>
+                <element signature="e#749#759#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,17 +164,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fixed_point/examples/matrix/matrixMul.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="113" column="11" lean-forward="true" selection-start-line="113" selection-start-column="11" selection-end-line="113" selection-end-column="11" />
+            <state relative-caret-position="327">
+              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+              <folding>
+                <element signature="e#50#86#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.6/dist-packages/numpy/matrixlib/defmatrix.py">
+        <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-1247971763/builtins.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+            <state relative-caret-position="294">
+              <caret line="3700" column="37" lean-forward="true" selection-start-line="3593" selection-end-line="3748" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -215,8 +223,8 @@
         <option value="$PROJECT_DIR$/fixed_point/examples/round/round_plots2.py" />
         <option value="$PROJECT_DIR$/fixed_point/examples/round/round_plots3.py" />
         <option value="$PROJECT_DIR$/fixed_point/fixed_point/_wformat.py" />
-        <option value="$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py" />
         <option value="$PROJECT_DIR$/fixed_point/examples/matrix/mathOperationsTB.py" />
+        <option value="$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py" />
         <option value="$PROJECT_DIR$/fixed_point/examples/matrix/matrixMul.py" />
       </list>
     </option>
@@ -415,17 +423,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Nosetests in test_fixbv.py" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <module name="src" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fixed_point/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/fixed_point/test/test_fixbv.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.matrixMul" />
       <item itemvalue="Python.test_fixed" />
       <item itemvalue="Python.test_wformat" />
       <item itemvalue="Python.mathOperationsTB" />
+      <item itemvalue="Python tests.Nosetests in test_fixbv.py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_fixed" />
+        <item itemvalue="Python tests.Nosetests in test_fixbv.py" />
         <item itemvalue="Python.mathOperationsTB" />
         <item itemvalue="Python.test_wformat" />
-        <item itemvalue="Python.test_fixed" />
       </list>
     </recent_temporary>
   </component>
@@ -442,6 +467,11 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Nosetests_in_test_fixbv_py - 2018.11.20 at 20h 49m 48s.xml">
+      <configuration name="Nosetests in test_fixbv.py" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -453,21 +483,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16657881" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4984127" weight="0.34615386" />
-      <window_info anchor="bottom" x="268" y="334" width="956" height="279" id="Run" order="2" sideWeight="0.49920633" weight="0.4947479" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" x="268" y="334" width="956" height="279" id="Run" order="2" sideWeight="0.49920633" visible="true" weight="0.3182773" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39915967" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32923076" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3276923" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32878152" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32983193" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32668066" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50131786" side_tool="true" weight="0.355042" />
-      <window_info anchor="bottom" auto_hide="true" id="Python Console" order="10" sideWeight="0.49920633" weight="0.40461537" />
+      <window_info anchor="bottom" auto_hide="true" id="Python Console" order="10" sideWeight="0.49920633" weight="0.40441176" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -511,12 +542,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myhdl-0.10-maintenance/example/manual/hello1.py" />
-    <entry file="jar:///usr/local/lib/python3.6/dist-packages/fixed_point-0.1.dev0-py3.6.egg!/fixed_point/_wformat.py" />
-    <entry file="file:///usr/lib/python3/dist-packages/setuptools/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/setup.py" />
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point/_fixbv.py.bak" />
-    <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point/__init__.py" />
     <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point.egg-info/requires.txt" />
     <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/fixed_point.egg-info/dependency_links.txt" />
     <entry file="file://$PROJECT_DIR$/cfelton-fixed_point-d036acd5e2e4/examples/sos/HelloWorld.py" />
@@ -532,7 +557,6 @@
     <entry file="file:///usr/local/lib/python3.6/dist-packages/myhdl/_instance.py" />
     <entry file="file:///usr/lib/python3.6/ast.py" />
     <entry file="file:///usr/local/lib/python3.6/dist-packages/myhdl/_resolverefs.py" />
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-1247971763/builtins.py" />
     <entry file="file:///usr/lib/python3.6/copy.py" />
     <entry file="file:///usr/local/lib/python3.6/dist-packages/myhdl/_Signal.py" />
     <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1641226478/math.py" />
@@ -576,13 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixed_point/test/test_fixbv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fixed_point/test/test_fixed.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -591,24 +608,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fixed_point/fixed_point/_wformat.py" />
     <entry file="file://$PROJECT_DIR$/fixed_point/examples/matrix/mathOperationsTB.py" />
-    <entry file="file://$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py">
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/numpy/matrixlib/defmatrix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7223">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        <state relative-caret-position="1005">
+          <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/numpy/matrixlib/defmatrix.py">
+    <entry file="file://$PROJECT_DIR$/fixed_point/test/test_fixbv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+        <state relative-caret-position="375">
+          <caret line="79" column="12" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="12" />
+          <folding>
+            <element signature="e#1#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/code.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/myhdl/_intbv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="92" column="18" lean-forward="true" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixed_point/fixed_point/_fixbv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="230" column="20" selection-start-line="230" selection-start-column="20" selection-end-line="230" selection-end-column="20" />
+          <folding>
+            <element signature="e#749#759#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/lib/fixed_point/_fixbv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="220" column="21" lean-forward="true" selection-start-line="220" selection-start-column="21" selection-end-line="220" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixed_point/fixed_point/_fixed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2475" />
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/myhdl/_bin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-1247971763/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="3700" column="37" lean-forward="true" selection-start-line="3593" selection-end-line="3748" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fixed_point/examples/matrix/matrixMul.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="113" column="11" lean-forward="true" selection-start-line="113" selection-start-column="11" selection-end-line="113" selection-end-column="11" />
+        <state relative-caret-position="327">
+          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+          <folding>
+            <element signature="e#50#86#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
