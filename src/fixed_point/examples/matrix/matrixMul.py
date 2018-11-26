@@ -139,4 +139,4 @@ cp = fixbv ( 0, min=-2, max=2, res=2 ** -15 )
 cp[ : ] = c000 + c001
 # print(cp)
 # print(cp._fval)
-print ( "Result of addition and multiplication for cp00: Value = {0}, Resolution = {1}".format ( cp._fval, cp.res ) )
+print ( "Result of addition and multiplication for cp00: Value = {0}, Resolution = {1}".format ( cp, cp.res ) )
