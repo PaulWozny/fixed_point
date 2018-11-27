@@ -1,20 +1,32 @@
-from alu import adderClk
+from adder import adder
+from multiplier import multply
 from fixed_point import fixbv
 from myhdl import *
 
 
-def adder_tb():
+def alu_tb():
 
-    x1 = Signal(fixbv(1.5, min=-2, max=2, res=2**-15))
-    x2 = Signal(fixbv(0.25, min=-2, max=2, res=2**-15))
-    output = Signal(fixbv(0, min=-2, max=4, res=2**-15))
-    add = adderClk(x1, x2, output)
-    return add
 
-inst = adder_tb()
-inst.run_sim(50)
-# twoja = adder_tb()
-# twoja.convert(hdl='VHDL')
+    clk = Signal(0)
+
+
+    x1 = Signal(fixbv(0.5, min=-2, max=2, res=2**-15))
+    x2 = Signal(fixbv(0.5, min=-2, max=2, res=2**-15))
+    output_add = Signal(fixbv(0, min=-2, max=4, res=2**-15))
+    output_mul = Signal(fixbv(0, min=-2, max=4, res=2 ** -15))
+
+    add = adder(x1, x2, output_add)
+
+    mul = multply(x1, x2, output_mul)
+
+    return add, mul
+
+
+
+# inst = alu_tb()
+# inst.run_sim(50)
+twoja = alu_tb()
+twoja.convert(hdl='VHDL')
 
 
 

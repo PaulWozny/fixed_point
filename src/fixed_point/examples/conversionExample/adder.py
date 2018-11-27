@@ -3,7 +3,7 @@ from fixed_point import *
 
 
 @block
-def adderClk(A, B, output2):
+def adder(A, B, output_add):
     """
 
     :param A:  input
@@ -12,24 +12,18 @@ def adderClk(A, B, output2):
     :return:
     """
 
-    clk = Signal(0)
-    @always(delay(10))
-    def drive_clk():
-        clk.next = not clk
-
-    @always(clk.posedge)
-    # @always_comb
-    def seq():
+    # @always(clk.posedge)
+    @always_comb
+    def adddd():
         print(A)
         print(B)
         sum = A + B
         print(sum)
         # retVal = fixbv(sum._fval, format=sum._W)
         retVal = sum
-        output2.next = retVal
-        print(output2)
-
-    return drive_clk, seq
+        output_add.next = retVal
+        print(output_add)
+    return adddd
 
 # @block
 # def adder(A, B, output2):
