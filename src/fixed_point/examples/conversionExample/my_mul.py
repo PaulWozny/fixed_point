@@ -11,10 +11,14 @@ def my_mul(a, b, c):
 
 @block
 def my_tb():
-    a = Signal(fixbv(0.5, min=-1, max=1, res=2**-9))
-    b = Signal(fixbv(0.25, min=-2, max=2, res=2**-10))
-    c = Signal(fixbv(0, min=-1, max=1, res=2**-20))
+    a = Signal(fixbv(0.5, min=-10, max=10, res=2**-9))
+    b = Signal(fixbv(0.25, min=-20, max=10, res=2**-10))
+    c = Signal(fixbv(0, min=-14, max=12, res=2**-20))
 
+    print("a:", a.W)
+    print("b:", a.W)
+    print("c:", a.W)
+    
     @instance
     def stim():
         yield delay(10)
