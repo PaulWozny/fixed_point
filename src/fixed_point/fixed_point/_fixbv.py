@@ -47,7 +47,7 @@ class fixbv(myhdl.intbv):
     """
 
     def __init__(self,
-                 value,  # initial default value
+                 value=0,  # initial default value
                  min=None,  # Min value required
                  max=None,  # Max value required
                  res=None,  # Resolution required

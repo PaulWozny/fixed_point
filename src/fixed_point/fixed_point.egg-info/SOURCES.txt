@@ -13,4 +13,5 @@ fixed_point.egg-info/requires.txt
 fixed_point.egg-info/top_level.txt
 test/test_fixbv.py
 test/test_fixed.py
+test/test_mathOperations.py
 test/test_wformat.py

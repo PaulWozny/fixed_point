@@ -1,13 +1,10 @@
-from fixed_point import fixed
+from fixed_point import fixbv
 
-def addfixed(x, y):
-    a = fixed(x)
-    b = fixed(y)
+a = fixbv(min=-100, max=100, res=2**-8)
+print(a)
 
-    c = a + b
 
-    return c
 
-print(addfixed(2, 22))
+
 
 
