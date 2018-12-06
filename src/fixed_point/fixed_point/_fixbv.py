@@ -220,6 +220,10 @@ class fixbv(myhdl.intbv):
     def W(self):
         return self._W
 
+    @property
+    def format(self):
+        return self._W
+
     @W.setter
     def W(self, val):
         self._W.fmt = val
