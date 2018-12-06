@@ -632,7 +632,7 @@ class fixbv(myhdl.intbv):
 # -#        return s
 # -#
 # -#
-# -#    def bit(self):
-# -#        """Return number as a bit string."""
-# -#        wl,iwl,fwl = self._W.fmt
-# -#        return myhdl.bin(self, wl)
+    def bit(self):
+        """Return number as a bit string."""
+        wl,iwl,fwl = self._W.fmt
+        return myhdl.bin(self, wl)
