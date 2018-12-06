@@ -133,7 +133,12 @@ class _Signal(object):
         val -- initial value
 
         """
-        self._init = deepcopy(val)
+        from fixed_point import fixbv
+
+        if isinstance(val, fixbv):
+            self._init = deepcopy(val.bit())
+        else:
+            self._init = deepcopy(val)
         self._val = deepcopy(val)
         self._next = deepcopy(val)
         self._min = self._max = None

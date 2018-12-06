@@ -28,10 +28,11 @@ def my_tb():
         raise StopSimulation()
 
     uut = my_mul(a, b, c)
-    uut.convert(hdl='VHDL')
+    # uut.convert(hdl='VHDL')
 
     return instances()
 
 tb = my_tb()
-tb.config_sim(trace=True)
-tb.run_sim()
+tb.convert(hdl='VHDL', initial_values=True)
+# tb.config_sim(trace=True)
+# tb.run_sim()
